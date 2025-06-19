@@ -20,10 +20,10 @@ public class CoronalLoop : MonoBehaviour
     [SerializeField, OnValueChanged("RefreshBezierPoints")] private float _footDistance = 64f;
     [SerializeField, OnValueChanged("RefreshBezierPoints")] private Vector3 _controlPointLeft = new Vector3(-32f, 64f, 0f);
     [SerializeField, OnValueChanged("RefreshBezierPoints")] private Vector3 _controlPointRight = new Vector3(32f, 64f, 0f);
-    [SerializeField, OnValueChanged("UpdateCoronalLoopRadius")] private AnimationCurve _xRadiusOverT;
-    [SerializeField, OnValueChanged("UpdateCoronalLoopRadius")] private AnimationCurve _yRadiusOverT;
-    [SerializeField, OnValueChanged("UpdateCoronalLoopRadius")] private AnimationCurve _zRadiusOverT;
-    [SerializeField, OnValueChanged("UpdateCoronalLoopRadius")] private float _peakRadius = 25f;
+    [SerializeField, OnValueChanged("RefreshCoronalLoopRadius")] private AnimationCurve _xRadiusOverT;
+    [SerializeField, OnValueChanged("RefreshCoronalLoopRadius")] private AnimationCurve _yRadiusOverT;
+    [SerializeField, OnValueChanged("RefreshCoronalLoopRadius")] private AnimationCurve _zRadiusOverT;
+    [SerializeField, OnValueChanged("RefreshCoronalLoopRadius")] private float _peakRadius = 25f;
 
     [Header("Coronal Loop Plasma")]
     [SerializeField, OnValueChanged("RefreshPlasmaProperties")] private bool _spawnFromLeft = true;
