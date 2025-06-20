@@ -47,9 +47,9 @@ MonoBehaviour:
   SoundList:
   - Clip: {fileID: 8300000, guid: 8e5300905bd77514595ab5f9cfffad6f, type: 3}
     Name: StartBGM
-    Volume: 0.6
+    Volume: 0.1
     Pitch: 1
-    Loop: 0
+    Loop: 1
     Source: {fileID: 0}
 --- !u!1 &6072006637741167124
 GameObject:
