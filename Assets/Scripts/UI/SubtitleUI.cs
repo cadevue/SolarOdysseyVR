@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using LitMotion;
 using LitMotion.Extensions;
+using NaughtyAttributes;
 
 public class SubtitleUI : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class SubtitleUI : MonoBehaviour
         _canvasGroup.alpha = 0f;
     }
 
+    [Button]
+    public void TestSubtitle()
+    {
+        DisplaySubtitle("This is a test subtitle, it should appear and disappear correctly.");
+    }
+
     public void DisplaySubtitle(string subtitle)
     {
         _cts?.Cancel();
@@ -35,8 +42,8 @@ public class SubtitleUI : MonoBehaviour
     private async UniTaskVoid TypeAndHide(string subtitle, CancellationToken token)
     {
         subtitleText.text = string.Empty;
-        subtitleText.rectTransform.anchoredPosition = _originalPosition + new Vector2(0, -30f);
-        _canvasGroup.alpha = 0f;
+        subtitleText.rectTransform.anchoredPosition = _originalPosition;
+        _canvasGroup.alpha = 1f;
 
         for (int i = 0; i < subtitle.Length; i++)
         {
@@ -56,7 +63,7 @@ public class SubtitleUI : MonoBehaviour
 
         var moveOutTask = LMotion.Create(
             subtitleText.rectTransform.anchoredPosition,
-            _originalPosition + new Vector2(0, 30f),
+            _originalPosition + new Vector2(0, -30f),
             0.3f
         )
          .BindToAnchoredPosition(subtitleText.rectTransform)

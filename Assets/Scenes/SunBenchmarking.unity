@@ -281,7 +281,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &356717899
 Transform:
@@ -977,7 +977,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &846209611
 Transform:
@@ -1202,9 +1202,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3070789803371301222, guid: ea986d144f54cfb4b933f758535742a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4400516634590686634, guid: ea986d144f54cfb4b933f758535742a4, type: 3}
       propertyPath: m_Name
       value: Spaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400516634590686634, guid: ea986d144f54cfb4b933f758535742a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4668684092478253973, guid: ea986d144f54cfb4b933f758535742a4, type: 3}
       propertyPath: m_IsActive
@@ -1691,7 +1699,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 126
   m_IsActive: 1
 --- !u!23 &1711813855408228744
 MeshRenderer:
@@ -1754,6 +1762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1908350953}
     m_Modifications:
+    - target: {fileID: 1262559031409152767, guid: f874abf0dba434847a20ae27c88a2d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2255576863000194772, guid: f874abf0dba434847a20ae27c88a2d7b, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1914,6 +1926,10 @@ PrefabInstance:
     - target: {fileID: 5448444194525668087, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
       propertyPath: m_Name
       value: Coronal Loop (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448444194525668087, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8178966203306068590, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
       propertyPath: m_PropertySheet.m_AnimationCurve.m_Array.Array.size
