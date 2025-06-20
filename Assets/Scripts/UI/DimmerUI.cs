@@ -23,6 +23,11 @@ public class DimmerUI : MonoBehaviour
         _fadeEase = ease;
     }
 
+    public void SetAlpha(float alpha)
+    {
+        _dimmerImage.alpha = alpha;
+    }
+
     public void OpaqueToTransparent()
     {
         LMotion.Create(_dimmerImage.alpha, 0f, _fadeDuration)

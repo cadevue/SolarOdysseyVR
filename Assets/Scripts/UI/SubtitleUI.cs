@@ -2,6 +2,8 @@ using TMPro;
 using UnityEngine;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using LitMotion;
+using LitMotion.Extensions;
 
 public class SubtitleUI : MonoBehaviour
 {
@@ -11,9 +13,14 @@ public class SubtitleUI : MonoBehaviour
     [SerializeField] private float _pauseOnCommaDuration = 0.5f;
 
     private CancellationTokenSource _cts;
+    private Vector2 _originalPosition;
+    private CanvasGroup _canvasGroup;
 
     private void Awake() {
         subtitleText.gameObject.SetActive(false);
+        _originalPosition = subtitleText.rectTransform.anchoredPosition;
+        _canvasGroup = subtitleText.GetComponent<CanvasGroup>();
+        _canvasGroup.alpha = 0f;
     }
 
     public void DisplaySubtitle(string subtitle)
@@ -28,6 +35,9 @@ public class SubtitleUI : MonoBehaviour
     private async UniTaskVoid TypeAndHide(string subtitle, CancellationToken token)
     {
         subtitleText.text = string.Empty;
+        subtitleText.rectTransform.anchoredPosition = _originalPosition + new Vector2(0, -30f);
+        _canvasGroup.alpha = 0f;
+
         for (int i = 0; i < subtitle.Length; i++)
         {
             token.ThrowIfCancellationRequested();
@@ -41,8 +51,28 @@ public class SubtitleUI : MonoBehaviour
                 await UniTask.Delay((int)(_perCharacterTypeDuration * 1000), cancellationToken: token);
             }
         }
+
         await UniTask.Delay((int)(_dissapearAfter * 1000), cancellationToken: token);
+
+        var moveOutTask = LMotion.Create(
+            subtitleText.rectTransform.anchoredPosition,
+            _originalPosition + new Vector2(0, 30f),
+            0.3f
+        )
+         .BindToAnchoredPosition(subtitleText.rectTransform)
+         .ToUniTask(cancellationToken: token);
+
+        var fadeOutTask = LMotion.Create(
+            _canvasGroup.alpha,
+            0f,
+            0.3f
+        )
+         .BindToAlpha(_canvasGroup)
+         .ToUniTask(cancellationToken: token);
+
+        await UniTask.WhenAll(moveOutTask, fadeOutTask);
         subtitleText.text = string.Empty;
         subtitleText.gameObject.SetActive(false);
+        subtitleText.rectTransform.anchoredPosition = _originalPosition;
     }
 }
