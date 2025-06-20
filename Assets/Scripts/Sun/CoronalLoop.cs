@@ -5,7 +5,7 @@ using UnityEngine.VFX;
 public class CoronalLoop : MonoBehaviour
 {
     [Header("Emitter")]
-    [SerializeField] private float _bound = 250f;
+    [SerializeField, OnValueChanged("RefreshEmitter")] private float _bound = 250f;
     [SerializeField] private VisualEffect _coronalLoopVFX;
 
     [Header("Coronal Loop Transform")]
@@ -34,6 +34,11 @@ public class CoronalLoop : MonoBehaviour
     [SerializeField, OnValueChanged("RefreshPlasmaProperties")] private AnimationCurve _plasmaAlphaOverLife;
     [SerializeField, OnValueChanged("RefreshPlasmaProperties")] private AnimationCurve _plasmaSizeOverLife;
     [SerializeField, OnValueChanged("RefreshPlasmaProperties")] private Vector2 _plasmaLifetimeRange = new Vector2(1.5f, 3f);
+
+    public void RefreshEmitter()
+    {
+        _coronalLoopVFX.SetFloat("EmitterBound", _bound);
+    }
 
     public void RefreshBezierPoints()
     {
