@@ -51,6 +51,13 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
     Source: {fileID: 0}
+  - Clip: {fileID: 8300000, guid: 283f10b031d3ac945856f89f220a51ab, type: 3}
+    Name: Blip
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Source: {fileID: 0}
+  RandomSoundList: []
 --- !u!1 &6072006637741167124
 GameObject:
   m_ObjectHideFlags: 0
