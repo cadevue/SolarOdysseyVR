@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class Sound
+public class RandomSound
 {
-    public AudioClip Clip;
+    public AudioClip[] Clips;
     public string Name;
     [Range(0f, 2f)]
     public float Volume = 0.6f;
