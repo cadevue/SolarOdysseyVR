@@ -8,8 +8,6 @@ public class SpaceshipLocomotion : MonoBehaviour
 
     [Header("Manual Control Settings")]
     [SerializeField] private float thrust = 1000f;
-    [SerializeField] private float upThrust = 500f;
-    [SerializeField] private float strafeThrust = 500f;
     [SerializeField] private float pitchTorque = 250f;
     [SerializeField] private float rollTorque = 250f;
     [SerializeField, Range(0.001f, 0.999f)] private float linearDamping = 0.98f;
