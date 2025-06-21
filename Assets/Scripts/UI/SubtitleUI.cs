@@ -49,6 +49,7 @@ public class SubtitleUI : MonoBehaviour
         {
             token.ThrowIfCancellationRequested();
             subtitleText.text += subtitle[i];
+            AudioManager.Instance.PlayOneShot("Blip");
             if (subtitle[i] == ',')
             {
                 await UniTask.Delay((int)(_pauseOnCommaDuration * 1000), cancellationToken: token);
