@@ -410,7 +410,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 512
+      m_SerializableObject: 256
     m_Space: -1
   m_Property:
     name: Rate
@@ -510,7 +510,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614662}
   - {fileID: 8926484042661614681}
   dataType: 0
-  capacity: 512
+  capacity: 256
   stripCapacity: 1
   particlePerStripCount: 32
   needsComputeBounds: 0
@@ -577,7 +577,6 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
-  - {fileID: 8926484042661614932}
   - {fileID: 8926484042661614682}
   m_OutputSlots: []
   m_Label: Render Quad
@@ -604,7 +603,7 @@ MonoBehaviour:
   flipbookLayout: 0
   flipbookBlendFrames: 0
   flipbookMotionVectors: 0
-  useSoftParticle: 1
+  useSoftParticle: 0
   vfxSystemSortPriority: 0
   sort: 0
   sortMode: 0
@@ -1440,7 +1439,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614856}
   m_ExposedName: EmitterOrigin
   m_Exposed: 1
-  m_Order: 6
+  m_Order: 5
   m_Category: Emitter
   m_Min:
     m_Type:
@@ -1632,7 +1631,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614861}
   m_ExposedName: CloudLifetimeRange
   m_Exposed: 1
-  m_Order: 3
+  m_Order: 2
   m_Category: Cloud
   m_Min:
     m_Type:
@@ -1785,7 +1784,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614865}
   m_ExposedName: OuterCloudSizeRange
   m_Exposed: 1
-  m_Order: 2
+  m_Order: 1
   m_Category: Cloud
   m_Min:
     m_Type:
@@ -1937,7 +1936,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614869}
   m_ExposedName: CloudColor
   m_Exposed: 1
-  m_Order: 4
+  m_Order: 3
   m_Category: Cloud
   m_Min:
     m_Type:
@@ -2157,7 +2156,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614875}
   m_ExposedName: CloudAlphaOverLife
   m_Exposed: 1
-  m_Order: 7
+  m_Order: 6
   m_Category: Cloud
   m_Min:
     m_Type:
@@ -2546,7 +2545,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614923}
   m_ExposedName: EmitterBound
   m_Exposed: 1
-  m_Order: 5
+  m_Order: 4
   m_Category: Emitter
   m_Min:
     m_Type:
@@ -2737,40 +2736,6 @@ MonoBehaviour:
   m_Direction: 0
   m_LinkedSlots:
   - {fileID: 8926484042661614863}
---- !u!114 &8926484042661614932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UIIgnoredErrors: []
-  m_Parent: {fileID: 0}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614932}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661614681}
-    m_Value:
-      m_Type:
-        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 100
-    m_Space: -1
-  m_Property:
-    name: softParticleFadeDistance
-    m_serializedType:
-      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-  m_Direction: 0
-  m_LinkedSlots: []
 --- !u!114 &8926484042661614933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3748,7 +3713,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: True
+      m_SerializableObject: False
     m_Space: -1
   m_Property:
     name: _vfx_enabled
@@ -5097,7 +5062,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615138}
   m_ExposedName: TurbulanceIntensity
   m_Exposed: 1
-  m_Order: 8
+  m_Order: 7
   m_Category: Cloud
   m_Min:
     m_Type:
@@ -5178,7 +5143,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615140}
   m_ExposedName: TurbulanceFrequency
   m_Exposed: 1
-  m_Order: 9
+  m_Order: 8
   m_Category: Cloud
   m_Min:
     m_Type:
