@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Renders.unity
-    guid: 1c36fdd5d9c2b2541b54c3243b8c3f56
+    path: Assets/Scenes/SunBenchmarking.unity
+    guid: ce7369d443834b84aa02c23b12365352
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d07950c4c1b97d1479f63a87fc4dad98, type: 2}
