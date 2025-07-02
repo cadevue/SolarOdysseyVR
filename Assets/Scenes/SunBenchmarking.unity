@@ -340,6 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 356717899}
+  - component: {fileID: 356717900}
   m_Layer: 0
   m_Name: vfx_Loops
   m_TagString: Untagged
@@ -363,11 +364,36 @@ Transform:
   - {fileID: 361211535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &356717900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356717898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb471c54b17afe469aa6a0f390f9511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coronalLoops:
+  - {fileID: 361211538}
 --- !u!4 &361211535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 39134263765194995, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
   m_PrefabInstance: {fileID: 8311774392165995609}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &361211538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9218028791145786120, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
+  m_PrefabInstance: {fileID: 8311774392165995609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177b3d03a5aac140a5baedd91883598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &380316004
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +570,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 227.795, y: -24}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 287.59, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494544007
 MonoBehaviour:
@@ -667,9 +693,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 95527588414440300, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 457454987019659584, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 489729108007917095, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 609622718791391482, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_Layer
@@ -751,6 +785,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3886115357102783634, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3926644608398008965, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -829,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222619239918823362, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.20021594
+      value: 0.20008896
       objectReference: {fileID: 0}
     - target: {fileID: 5313115564657351883, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_Layer
@@ -881,6 +919,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305248422685449537, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566235492522354032, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6691841983027599503, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
@@ -2303,7 +2345,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 318.84, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1338197443
 MonoBehaviour:
@@ -2378,9 +2420,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 697117102}
-        m_TargetAssemblyTypeName: SunSettings, Assembly-CSharp
-        m_MethodName: OnCoronalLoopsToggled
+      - m_Target: {fileID: 356717900}
+        m_TargetAssemblyTypeName: CoronalLoopManager, Assembly-CSharp
+        m_MethodName: SetCoronalLoopsActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

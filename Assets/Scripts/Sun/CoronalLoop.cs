@@ -1,6 +1,6 @@
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.VFX;
+using NaughtyAttributes;
 
 public class CoronalLoop : MonoBehaviour
 {
@@ -93,5 +93,19 @@ public class CoronalLoop : MonoBehaviour
         _coronalLoopVFX.SetAnimationCurve("PlasmaAlphaOverLife", _plasmaAlphaOverLife);
         _coronalLoopVFX.SetAnimationCurve("PlasmaSizeOverLife", _plasmaSizeOverLife);
         _coronalLoopVFX.SetVector2("PlasmaLifetimeRange", _plasmaLifetimeRange);
+    }
+
+    [Button]
+    public void EnableCoronalLoop()
+    {
+        _coronalLoopVFX.SetUInt("LeftPlasmaSpawnRate", _spawnFromLeft ? _plasmaSpawnRate : 0);
+        _coronalLoopVFX.SetUInt("RightPlasmaSpawnRate", _spawnFromRight ? _plasmaSpawnRate : 0);
+    }
+
+    [Button]
+    public void DisableCoronalLoop()
+    {
+        _coronalLoopVFX.SetUInt("LeftPlasmaSpawnRate", 0);
+        _coronalLoopVFX.SetUInt("RightPlasmaSpawnRate", 0);
     }
 }
