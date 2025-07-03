@@ -20,6 +20,7 @@ float2 RotateUV(float2 uv, float2 center, float angle)
 void SampleSunspots_float(float2 uv, out float mask)
 {
     mask = 0;
+    uv = floor(uv * 8192.0) / 8192.0; // quantize to reduce precision issues
 
     [unroll(20)]
     for (int i = 0; i < 20; i++)

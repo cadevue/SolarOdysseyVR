@@ -109,10 +109,7 @@ public class SunspotManager : MonoBehaviour
             float lon = _sunspotsMemory[i].longitude;
             Vector2 uv = SphericalToUVCoord(lat, lon);
 
-            // Adjust the scale based on the solar cycle progress (scale will be 0 to _sunspotMemory[i].scale)
-            // _sunspotMemory[i].scale will be used if the solar cycle has exceed one more sunspot after the current one
-            float t = Mathf.Clamp01((_solarCycleProgress - ((float)i / _maxSunspots)) / (1f / _maxSunspots));
-            float scale = _sunspotsMemory[i].scale * t;
+            float scale = _sunspotsMemory[i].scale;
 
             _sunspotsShaderData[i].uv = uv;
             _sunspotsShaderData[i].scale = scale;
