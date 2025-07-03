@@ -96,7 +96,7 @@ Material:
     - _EquatorLineColor: {r: 0, g: 0.9795789, b: 1, a: 0}
     - _LongitudeRange: {r: 0, g: 0, b: 0, a: 0}
     - _SunBaseColor: {r: 0.90588236, g: 0.4487962, b: 0.12549017, a: 1}
-    - _SunspotColorMultiply: {r: 0.7176471, g: 0.10980392, b: 0, a: 1}
+    - _SunspotColorMultiply: {r: 1, g: 0.28152826, b: 0, a: 1}
     - _SunspotSizeRange: {r: 10, g: 20, b: 0, a: 0}
     - _SunspotTilingSizeRange: {r: 20, g: 30, b: 0, a: 0}
     - _TilingSizeRange: {r: 10, g: 20, b: 0, a: 0}

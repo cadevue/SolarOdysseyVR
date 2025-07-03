@@ -198,322 +198,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &197856392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 197856396}
-  - component: {fileID: 197856395}
-  - component: {fileID: 197856394}
-  - component: {fileID: 197856393}
-  - component: {fileID: 197856397}
-  m_Layer: 0
-  m_Name: Sunspot Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!64 &197856393
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197856392}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &197856394
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197856392}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d08fcb8e6a545e243b35a0bc36219e3e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &197856395
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197856392}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &197856396
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197856392}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2000, y: 2000, z: 2000}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &197856397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197856392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07909cf5c9ec77740b83284288082259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sunspotMaterial: {fileID: 2100000, guid: d08fcb8e6a545e243b35a0bc36219e3e, type: 2}
-  _maxSunspots: 20
-  _solarCycleProgress: 0
-  _sunspotSizeRange: {x: 0.02, y: 0.1}
-  _longitudeRange: {x: 120, y: 240}
-  _latitudeLocationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 32.5
-      inSlope: 0
-      outSlope: -22.5
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 10
-      inSlope: -22.5
-      outSlope: -15
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _latitudeDeviation: 2.5
-  _sunspotTexArray: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
-  _sunspotTexArrayWeights: 0500000001000000050000000500000005000000050000000500000005000000
-  _sunspotsShaderData:
-  - uv: {x: 0, y: 0}
-    rotation: 3.760526
-    scale: 0
-    layer: 4
-  - uv: {x: 0, y: 0}
-    rotation: 1.4667913
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 4.4570374
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 5.045931
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 4.418467
-    scale: 0
-    layer: 4
-  - uv: {x: 0, y: 0}
-    rotation: 1.8852494
-    scale: 0
-    layer: 7
-  - uv: {x: 0, y: 0}
-    rotation: 5.3969
-    scale: 0
-    layer: 5
-  - uv: {x: 0, y: 0}
-    rotation: 0.11544404
-    scale: 0
-    layer: 7
-  - uv: {x: 0, y: 0}
-    rotation: 4.148022
-    scale: 0
-    layer: 2
-  - uv: {x: 0, y: 0}
-    rotation: 2.8377047
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 2.130248
-    scale: 0
-    layer: 2
-  - uv: {x: 0, y: 0}
-    rotation: 2.8397486
-    scale: 0
-    layer: 2
-  - uv: {x: 0, y: 0}
-    rotation: 0.36113715
-    scale: 0
-    layer: 5
-  - uv: {x: 0, y: 0}
-    rotation: 5.537568
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 2.3300881
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 2.845752
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 4.1597357
-    scale: 0
-    layer: 7
-  - uv: {x: 0, y: 0}
-    rotation: 0.5679047
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 2.8361025
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 1.5688572
-    scale: 0
-    layer: 2
-  _sunspotsMemory:
-  - hemisphere: -1
-    scale: 0.08476043
-    longitude: 224.01904
-    latDeviation: 1.9707894
-  - hemisphere: -1
-    scale: 0.08750092
-    longitude: 195.09915
-    latDeviation: -2.4404602
-  - hemisphere: -1
-    scale: 0.04924957
-    longitude: 150.35522
-    latDeviation: 0.78666085
-  - hemisphere: 1
-    scale: 0.09212822
-    longitude: 206.5127
-    latDeviation: 1.5308064
-  - hemisphere: 1
-    scale: 0.07701427
-    longitude: 179.87595
-    latDeviation: -1.8664895
-  - hemisphere: 1
-    scale: 0.06637176
-    longitude: 186.97733
-    latDeviation: -0.6091366
-  - hemisphere: 1
-    scale: 0.09769517
-    longitude: 148.91835
-    latDeviation: 2.2305012
-  - hemisphere: -1
-    scale: 0.080294326
-    longitude: 136.89288
-    latDeviation: -1.7759776
-  - hemisphere: -1
-    scale: 0.08048466
-    longitude: 187.18652
-    latDeviation: -0.07043147
-  - hemisphere: -1
-    scale: 0.04227487
-    longitude: 206.97565
-    latDeviation: 0.8631033
-  - hemisphere: -1
-    scale: 0.06848611
-    longitude: 193.75659
-    latDeviation: 1.2716782
-  - hemisphere: -1
-    scale: 0.029999342
-    longitude: 198.40616
-    latDeviation: -1.4283986
-  - hemisphere: 1
-    scale: 0.033800647
-    longitude: 204.95023
-    latDeviation: 2.2736745
-  - hemisphere: 1
-    scale: 0.03309928
-    longitude: 207.86362
-    latDeviation: -1.7835975
-  - hemisphere: 1
-    scale: 0.03752365
-    longitude: 201.21356
-    latDeviation: -1.7785387
-  - hemisphere: -1
-    scale: 0.0738377
-    longitude: 170.99678
-    latDeviation: -1.5977292
-  - hemisphere: 1
-    scale: 0.04131653
-    longitude: 221.8208
-    latDeviation: -0.64241505
-  - hemisphere: -1
-    scale: 0.039529268
-    longitude: 169.97183
-    latDeviation: 0.5434158
-  - hemisphere: -1
-    scale: 0.062115237
-    longitude: 146.5917
-    latDeviation: 1.4040809
-  - hemisphere: 1
-    scale: 0.07226979
-    longitude: 203.59622
-    latDeviation: 2.3028183
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,11 +807,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sunspotMaterial: {fileID: 2100000, guid: d08fcb8e6a545e243b35a0bc36219e3e, type: 2}
-  _maxSunspots: 20
+  _maxSunspots: 8
   _solarCycleProgress: 1
-  _sunspotSizeRange: {x: 0.01, y: 0.035}
-  _longitudeRange: {x: 145, y: 200}
-  _latitudeLocationCurve:
+  _sunspotSizeRange: {x: 0.4, y: 2}
+  _longitudeRange: {x: 150, y: 185}
+  _latitudeLineLocationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -1153,169 +837,73 @@ MonoBehaviour:
     m_RotationOrder: 4
   _latitudeDeviation: 2.5
   _sunspotTexArray: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
-  _sunspotTexArrayWeights: 0300000001000000030000000300000003000000030000000300000003000000
+  _sunspotTexArrayWeights: 0100000001000000010000000100000001000000010000000100000001000000
   _sunspotsShaderData:
-  - uv: {x: 0.40528136, y: 0.54464656}
-    rotation: 4.6155167
-    scale: 0.018979773
-    layer: 0
-  - uv: {x: 0.45694193, y: 0.57203954}
-    rotation: 4.1545887
-    scale: 0.020584779
-    layer: 7
-  - uv: {x: 0.47159168, y: 0.5646211}
-    rotation: 5.601746
-    scale: 0.019175895
-    layer: 2
-  - uv: {x: 0.5212972, y: 0.5667511}
-    rotation: 0.6399554
-    scale: 0.027638234
+  - uv: {x: 0, y: 0}
+    rotation: 5.413303
+    scale: 0
     layer: 5
-  - uv: {x: 0.4798839, y: 0.5754832}
-    rotation: 5.001361
-    scale: 0.03189112
+  - uv: {x: 0, y: 0}
+    rotation: 4.199266
+    scale: 0
+    layer: 0
+  - uv: {x: 0, y: 0}
+    rotation: 3.4225984
+    scale: 0
+    layer: 2
+  - uv: {x: 0, y: 0}
+    rotation: 2.30257
+    scale: 0
+    layer: 7
+  - uv: {x: 0, y: 0}
+    rotation: 1.9297123
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 0.30289754
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 5.643777
+    scale: 0
     layer: 1
-  - uv: {x: 0.46261486, y: 0.5797583}
-    rotation: 0.17753805
-    scale: 0.017355174
-    layer: 2
-  - uv: {x: 0.504426, y: 0.44983083}
-    rotation: 2.9998183
-    scale: 0.022520062
-    layer: 0
-  - uv: {x: 0.45294222, y: 0.42530772}
-    rotation: 2.7138634
-    scale: 0.02644379
-    layer: 6
-  - uv: {x: 0.4507157, y: 0.5738561}
-    rotation: 5.690209
-    scale: 0.013186029
+  - uv: {x: 0, y: 0}
+    rotation: 2.4368129
+    scale: 0
     layer: 3
-  - uv: {x: 0.4457353, y: 0.429577}
-    rotation: 4.812702
-    scale: 0.031208858
-    layer: 5
-  - uv: {x: 0.515771, y: 0.54801273}
-    rotation: 2.1327386
-    scale: 0.02466606
-    layer: 6
-  - uv: {x: 0.51739347, y: 0.41917193}
-    rotation: 2.9327343
-    scale: 0.019871127
-    layer: 6
-  - uv: {x: 0.41381806, y: 0.43803778}
-    rotation: 0.11154842
-    scale: 0.020441677
-    layer: 3
-  - uv: {x: 0.4153073, y: 0.57186854}
-    rotation: 2.1031644
-    scale: 0.013139531
-    layer: 2
-  - uv: {x: 0.48997757, y: 0.5552346}
-    rotation: 2.5152795
-    scale: 0.012908855
-    layer: 0
-  - uv: {x: 0.42071816, y: 0.4149525}
-    rotation: 0.3459876
-    scale: 0.026186036
-    layer: 3
-  - uv: {x: 0.44811922, y: 0.4562399}
-    rotation: 3.1538334
-    scale: 0.016368495
-    layer: 6
-  - uv: {x: 0.498938, y: 0.4502085}
-    rotation: 3.0218663
-    scale: 0.02075254
-    layer: 7
-  - uv: {x: 0.4879558, y: 0.5609928}
-    rotation: 3.6999652
-    scale: 0.027387764
-    layer: 6
-  - uv: {x: 0.44191784, y: 0.42313933}
-    rotation: 4.654845
-    scale: 0.034762193
-    layer: 2
   _sunspotsMemory:
   - hemisphere: -1
-    scale: 0.018979773
-    longitude: 145.90129
-    latDeviation: -2.377057
+    scale: 0.010342495
+    longitude: 166.34659
+    latDeviation: 0.92828745
   - hemisphere: -1
-    scale: 0.020584779
-    longitude: 164.4991
-    latDeviation: 0.78395414
-  - hemisphere: -1
-    scale: 0.019175895
-    longitude: 169.77301
-    latDeviation: -0.0741992
-  - hemisphere: -1
-    scale: 0.027638234
-    longitude: 187.667
-    latDeviation: 0.17202044
-  - hemisphere: -1
-    scale: 0.03189112
-    longitude: 172.75821
-    latDeviation: 1.1829376
-  - hemisphere: -1
-    scale: 0.017355174
-    longitude: 166.54135
-    latDeviation: 1.6788344
+    scale: 0.0051308726
+    longitude: 150.2224
+    latDeviation: -2.1672816
   - hemisphere: 1
-    scale: 0.022520062
-    longitude: 181.59337
-    latDeviation: -1.7413449
+    scale: 0.013782769
+    longitude: 160.19707
+    latDeviation: 0.9619646
   - hemisphere: 1
-    scale: 0.02644379
-    longitude: 163.0592
-    latDeviation: 1.0912609
+    scale: 0.013826069
+    longitude: 153.80682
+    latDeviation: 2.3095942
   - hemisphere: -1
-    scale: 0.013186029
-    longitude: 162.25764
-    latDeviation: 0.9943735
+    scale: 0.015594912
+    longitude: 176.57205
+    latDeviation: 1.8229246
   - hemisphere: 1
-    scale: 0.031208858
-    longitude: 160.4647
-    latDeviation: 0.59680605
+    scale: 0.0068646795
+    longitude: 177.46733
+    latDeviation: 1.473192
   - hemisphere: -1
-    scale: 0.02466606
-    longitude: 185.67755
-    latDeviation: -1.9896544
-  - hemisphere: 1
-    scale: 0.019871127
-    longitude: 186.26164
-    latDeviation: 1.8030386
-  - hemisphere: 1
-    scale: 0.020441677
-    longitude: 148.9745
-    latDeviation: -0.38135195
+    scale: 0.014803276
+    longitude: 159.27455
+    latDeviation: 1.1109293
   - hemisphere: -1
-    scale: 0.013139531
-    longitude: 149.51064
-    latDeviation: 0.7641524
-  - hemisphere: -1
-    scale: 0.012908855
-    longitude: 176.39192
-    latDeviation: -1.157634
-  - hemisphere: 1
-    scale: 0.026186036
-    longitude: 151.45854
-    latDeviation: 2.293344
-  - hemisphere: 1
-    scale: 0.016368495
-    longitude: 161.32292
-    latDeviation: -2.4790392
-  - hemisphere: 1
-    scale: 0.02075254
-    longitude: 179.61768
-    latDeviation: -1.7848415
-  - hemisphere: -1
-    scale: 0.027387764
-    longitude: 175.6641
-    latDeviation: -0.49329185
-  - hemisphere: 1
-    scale: 0.034762193
-    longitude: 159.09042
-    latDeviation: 1.3426441
+    scale: 0.004874062
+    longitude: 171.87894
+    latDeviation: -1.7506266
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1324,5 +912,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 426258955052633117}
   - {fileID: 382763865}
-  - {fileID: 197856396}
   - {fileID: 91997001}

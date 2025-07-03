@@ -9,7 +9,7 @@ public class SunspotManager : MonoBehaviour
     [SerializeField, Range(0, 1), OnValueChanged("UpdateSunspots")] private float _solarCycleProgress = 0.5f; // 0 = minimum, 1 = maximum
     [SerializeField] private Vector2 _sunspotSizeRange = new Vector2(0.02f, 0.1f);
     [SerializeField] private Vector2 _longitudeRange = new Vector2(135f, 225f);
-    [SerializeField] private AnimationCurve _latitudeLocationCurve = AnimationCurve.Linear(0, 30, 1, 15);
+    [SerializeField] private AnimationCurve _latitudeLineLocationCurve = AnimationCurve.Linear(0, 30, 1, 15);
     [SerializeField] private float _latitudeDeviation = 2.5f;
     [SerializeField] private Texture2DArray _sunspotTexArray;
     [SerializeField] private int[] _sunspotTexArrayWeights;
@@ -72,7 +72,7 @@ public class SunspotManager : MonoBehaviour
             _sunspotsMemory[i] = new SunspotMemory
             {
                 hemisphere = hemisphere,
-                scale = scale,
+                scale = scale / 100,
                 longitude = longitude,
                 latDeviation = latDeviation
             };
@@ -103,13 +103,16 @@ public class SunspotManager : MonoBehaviour
 
         for (int i = 0; i < sunspotCount; i++)
         {
-            float latLine = _latitudeLocationCurve.Evaluate(_solarCycleProgress);
+            float latLine = _latitudeLineLocationCurve.Evaluate(_solarCycleProgress);
             int hemisphere = _sunspotsMemory[i].hemisphere;
-            float scale = _sunspotsMemory[i].scale;
             float lat = hemisphere * (latLine + _sunspotsMemory[i].latDeviation);
             float lon = _sunspotsMemory[i].longitude;
-
             Vector2 uv = SphericalToUVCoord(lat, lon);
+
+            // Adjust the scale based on the solar cycle progress (scale will be 0 to _sunspotMemory[i].scale)
+            // _sunspotMemory[i].scale will be used if the solar cycle has exceed one more sunspot after the current one
+            float t = Mathf.Clamp01((_solarCycleProgress - ((float)i / _maxSunspots)) / (1f / _maxSunspots));
+            float scale = _sunspotsMemory[i].scale * t;
 
             _sunspotsShaderData[i].uv = uv;
             _sunspotsShaderData[i].scale = scale;
