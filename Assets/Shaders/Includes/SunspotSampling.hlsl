@@ -28,7 +28,7 @@ void SampleSunspots_float(float2 uv, out float mask)
         if (s.scale <= 0) continue;
 
         float2 tuv = (uv - s.uv) / s.scale + 0.5;
-        // tuv = RotateUV(tuv, 0.5, s.rotation);
+        tuv = RotateUV(tuv, 0.5, s.rotation);
 
         float4 tex = SAMPLE_TEXTURE2D_ARRAY(_SunspotTexArray, sampler_SunspotTexArray, tuv, s.layer);
 

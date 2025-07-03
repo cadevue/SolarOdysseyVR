@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &197856393
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1031,13 +1031,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105382623646832485}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13573466, y: 0.84542847, z: -0.1848145, w: -0.48235938}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.46, y: 241.691, z: 24.5}
 --- !u!1 &4105382623646832485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &4868376337710850308
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1134,17 +1134,17 @@ MonoBehaviour:
       time: 0
       value: 30
       inSlope: 0
-      outSlope: -15
-      tangentMode: 0
+      outSlope: -22.5
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 15
-      inSlope: -15
-      outSlope: 0
-      tangentMode: 0
+      value: 7.5
+      inSlope: -22.5
+      outSlope: -15
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -1152,10 +1152,170 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _latitudeDeviation: 2.5
-  _sunspotTexArray: {fileID: 0}
-  _sunspotTexArrayWeights: 
-  _sunspotsShaderData: []
-  _sunspotsMemory: []
+  _sunspotTexArray: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
+  _sunspotTexArrayWeights: 0300000001000000030000000300000003000000030000000300000003000000
+  _sunspotsShaderData:
+  - uv: {x: 0, y: 0}
+    rotation: 5.258666
+    scale: 0
+    layer: 4
+  - uv: {x: 0, y: 0}
+    rotation: 3.2395043
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 4.2642612
+    scale: 0
+    layer: 2
+  - uv: {x: 0, y: 0}
+    rotation: 1.3326916
+    scale: 0
+    layer: 4
+  - uv: {x: 0, y: 0}
+    rotation: 0.60916716
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 4.415799
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 2.5776281
+    scale: 0
+    layer: 0
+  - uv: {x: 0, y: 0}
+    rotation: 1.5620928
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 1.0992275
+    scale: 0
+    layer: 7
+  - uv: {x: 0, y: 0}
+    rotation: 4.2237415
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 3.4089777
+    scale: 0
+    layer: 0
+  - uv: {x: 0, y: 0}
+    rotation: 1.5304815
+    scale: 0
+    layer: 2
+  - uv: {x: 0, y: 0}
+    rotation: 0.6314593
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 0.8374172
+    scale: 0
+    layer: 4
+  - uv: {x: 0, y: 0}
+    rotation: 3.3426464
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 2.6569877
+    scale: 0
+    layer: 0
+  - uv: {x: 0, y: 0}
+    rotation: 0.020179937
+    scale: 0
+    layer: 7
+  - uv: {x: 0, y: 0}
+    rotation: 4.85306
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 2.1337361
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 3.461915
+    scale: 0
+    layer: 5
+  _sunspotsMemory:
+  - hemisphere: -1
+    scale: 0.02433281
+    longitude: 185.85161
+    latDeviation: 0.37136292
+  - hemisphere: -1
+    scale: 0.04537038
+    longitude: 146.32933
+    latDeviation: -2.0526094
+  - hemisphere: -1
+    scale: 0.031564683
+    longitude: 153.23598
+    latDeviation: -1.8291306
+  - hemisphere: -1
+    scale: 0.020474575
+    longitude: 160.36829
+    latDeviation: 0.25206184
+  - hemisphere: 1
+    scale: 0.026759656
+    longitude: 152.60168
+    latDeviation: 2.251563
+  - hemisphere: 1
+    scale: 0.03837065
+    longitude: 197.4997
+    latDeviation: 1.6063541
+  - hemisphere: 1
+    scale: 0.046372253
+    longitude: 155.26447
+    latDeviation: 1.385287
+  - hemisphere: 1
+    scale: 0.012700958
+    longitude: 184.3945
+    latDeviation: 2.4469268
+  - hemisphere: -1
+    scale: 0.028053043
+    longitude: 183.05533
+    latDeviation: -2.4142456
+  - hemisphere: 1
+    scale: 0.049739685
+    longitude: 176.95424
+    latDeviation: -0.22634363
+  - hemisphere: -1
+    scale: 0.048608758
+    longitude: 171.47375
+    latDeviation: 0.20572686
+  - hemisphere: 1
+    scale: 0.010250688
+    longitude: 167.143
+    latDeviation: -0.36103272
+  - hemisphere: 1
+    scale: 0.017369255
+    longitude: 196.9783
+    latDeviation: -0.13762093
+  - hemisphere: 1
+    scale: 0.03877937
+    longitude: 176.69681
+    latDeviation: -1.5349913
+  - hemisphere: -1
+    scale: 0.010845313
+    longitude: 181.81479
+    latDeviation: -0.47296977
+  - hemisphere: -1
+    scale: 0.031471793
+    longitude: 189.47745
+    latDeviation: 1.4983457
+  - hemisphere: -1
+    scale: 0.041184727
+    longitude: 178.15128
+    latDeviation: 1.4824085
+  - hemisphere: 1
+    scale: 0.046868052
+    longitude: 170.76678
+    latDeviation: -0.90458536
+  - hemisphere: -1
+    scale: 0.038921762
+    longitude: 179.97217
+    latDeviation: 1.7161483
+  - hemisphere: 1
+    scale: 0.012380909
+    longitude: 194.66907
+    latDeviation: -1.5454836
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
