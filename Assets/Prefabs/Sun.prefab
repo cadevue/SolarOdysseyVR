@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 426258954094115997}
   - component: {fileID: 6083838969189066984}
   - component: {fileID: 4868376337557623172}
+  - component: {fileID: 2180139772527851586}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105382624067971045}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.13573459, y: -0.8454282, z: 0.18481456, w: 0.48235968}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.46, y: -118.309, z: 24.5}
 --- !u!33 &6083838969189066984
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -40,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105382624067971045}
-  m_Mesh: {fileID: 7635966871667087326, guid: dc9ceee181365514d9d1dd00760c657f, type: 3}
+  m_Mesh: {fileID: -8013842104826404567, guid: 51d95462ba6c9c1409845c4b8e0d43c3, type: 3}
 --- !u!23 &4868376337557623172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -86,3 +87,115 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2180139772527851586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105382624067971045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07909cf5c9ec77740b83284288082259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sunspotMaterial: {fileID: 2100000, guid: 350d1b01d06789146aefc7edbe147b11, type: 2}
+  _maxSunspots: 8
+  _solarCycleProgress: 0
+  _sunspotSizeRange: {x: 0.4, y: 2}
+  _longitudeRange: {x: 150, y: 185}
+  _latitudeLineLocationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 30
+      inSlope: 0
+      outSlope: -22.5
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 7.5
+      inSlope: -22.5
+      outSlope: -15
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _latitudeDeviation: 2.5
+  _sunspotTexArray: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
+  _sunspotTexArrayWeights: 0100000001000000010000000100000001000000010000000100000001000000
+  _sunspotsShaderData:
+  - uv: {x: 0, y: 0}
+    rotation: 1.755016
+    scale: 0
+    layer: 6
+  - uv: {x: 0, y: 0}
+    rotation: 2.5020752
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 3.767676
+    scale: 0
+    layer: 1
+  - uv: {x: 0, y: 0}
+    rotation: 1.8986882
+    scale: 0
+    layer: 4
+  - uv: {x: 0, y: 0}
+    rotation: 2.6282654
+    scale: 0
+    layer: 2
+  - uv: {x: 0, y: 0}
+    rotation: 5.0799484
+    scale: 0
+    layer: 1
+  - uv: {x: 0, y: 0}
+    rotation: 4.7616553
+    scale: 0
+    layer: 3
+  - uv: {x: 0, y: 0}
+    rotation: 3.3548644
+    scale: 0
+    layer: 2
+  _sunspotsMemory:
+  - hemisphere: -1
+    scale: 0.0051804795
+    longitude: 153.28868
+    latDeviation: -0.09362912
+  - hemisphere: 1
+    scale: 0.009684775
+    longitude: 171.94324
+    latDeviation: 2.2815065
+  - hemisphere: 1
+    scale: 0.019969521
+    longitude: 173.20528
+    latDeviation: -1.4482064
+  - hemisphere: -1
+    scale: 0.009337352
+    longitude: 169.87766
+    latDeviation: -1.8129516
+  - hemisphere: -1
+    scale: 0.01879178
+    longitude: 172.96538
+    latDeviation: -1.6805768
+  - hemisphere: -1
+    scale: 0.012005471
+    longitude: 169.01285
+    latDeviation: 1.826114
+  - hemisphere: -1
+    scale: 0.008121574
+    longitude: 151.70662
+    latDeviation: -1.2698417
+  - hemisphere: -1
+    scale: 0.016347516
+    longitude: 174.9484
+    latDeviation: 0.022165537
+  _highlightAnimationDuration: 0.3
+  _highlightAnimationEase: 5

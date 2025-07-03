@@ -1,6 +1,8 @@
 using System;
 using NaughtyAttributes;
 using UnityEngine;
+using LitMotion;
+using LitMotion.Extensions;
 
 public class SunspotManager : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class SunspotManager : MonoBehaviour
     [SerializeField] private int[] _sunspotTexArrayWeights;
     [SerializeField, ReadOnly] private SunspotShaderData[] _sunspotsShaderData;
     [SerializeField, ReadOnly] private SunspotMemory[] _sunspotsMemory;
+    [SerializeField] private float _highlightAnimationDuration = 0.5f;
+    [SerializeField] private Ease _highlightAnimationEase = Ease.OutQuad;
 
     [Serializable]
     struct SunspotShaderData
@@ -35,6 +39,8 @@ public class SunspotManager : MonoBehaviour
     }
 
     private ComputeBuffer _sunspotBuffer;
+    private float _originalSunspotView;
+    private MotionHandle _highlightAnimationHandle;
 
     [Button("Serialize Sunspots Data")]
     public void InitializeSunspots()
@@ -87,6 +93,11 @@ public class SunspotManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        _originalSunspotView = _sunspotMaterial.GetFloat("_SunspotView");
+    }
+
     private void Start()
     {
         _sunspotBuffer?.Release();
@@ -125,6 +136,27 @@ public class SunspotManager : MonoBehaviour
         _sunspotMaterial.SetBuffer("_SunspotBuffer", _sunspotBuffer);
     }
 
+    public void SetSolarCycleProgress(float progress)
+    {
+        _solarCycleProgress = Mathf.Clamp01(progress);
+        UpdateSunspots();
+    }
+
+    public void SetHighlightSunspot(bool isHighlighted)
+    {
+        if (_highlightAnimationHandle.IsActive())
+        {
+            _highlightAnimationHandle.Cancel();
+        }
+
+        float currentValue = _sunspotMaterial.GetFloat("_SunspotView");
+        float targetValue = isHighlighted ? 1f : 0f;
+
+        _highlightAnimationHandle = LMotion.Create(currentValue, targetValue, _highlightAnimationDuration)
+            .WithEase(_highlightAnimationEase)
+            .Bind(value => _sunspotMaterial.SetFloat("_SunspotView", value));
+    }
+
     private Vector2 SphericalToUVCoord(float latitude, float longitude)
     {
         float u = longitude / 360f;
@@ -134,10 +166,19 @@ public class SunspotManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        // Cancel any active animation
+        if (_highlightAnimationHandle.IsActive())
+        {
+            _highlightAnimationHandle.Cancel();
+        }
+
         if (_sunspotBuffer != null)
         {
             _sunspotBuffer.Release();
             _sunspotBuffer = null;
         }
+
+        _sunspotMaterial.SetBuffer("_SunspotBuffer", (ComputeBuffer)null);
+        _sunspotMaterial.SetFloat("_SunspotView", _originalSunspotView);
     }
 }
