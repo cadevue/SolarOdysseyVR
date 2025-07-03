@@ -1125,7 +1125,7 @@ MonoBehaviour:
   _sunspotMaterial: {fileID: 2100000, guid: d08fcb8e6a545e243b35a0bc36219e3e, type: 2}
   _maxSunspots: 20
   _solarCycleProgress: 1
-  _sunspotSizeRange: {x: 0.01, y: 0.05}
+  _sunspotSizeRange: {x: 0.01, y: 0.035}
   _longitudeRange: {x: 145, y: 200}
   _latitudeLocationCurve:
     serializedVersion: 2
@@ -1155,167 +1155,167 @@ MonoBehaviour:
   _sunspotTexArray: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
   _sunspotTexArrayWeights: 0300000001000000030000000300000003000000030000000300000003000000
   _sunspotsShaderData:
-  - uv: {x: 0, y: 0}
-    rotation: 5.258666
-    scale: 0
-    layer: 4
-  - uv: {x: 0, y: 0}
-    rotation: 3.2395043
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 4.2642612
-    scale: 0
-    layer: 2
-  - uv: {x: 0, y: 0}
-    rotation: 1.3326916
-    scale: 0
-    layer: 4
-  - uv: {x: 0, y: 0}
-    rotation: 0.60916716
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 4.415799
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 2.5776281
-    scale: 0
+  - uv: {x: 0.40528136, y: 0.54464656}
+    rotation: 4.6155167
+    scale: 0.018979773
     layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 1.5620928
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 1.0992275
-    scale: 0
+  - uv: {x: 0.45694193, y: 0.57203954}
+    rotation: 4.1545887
+    scale: 0.020584779
     layer: 7
-  - uv: {x: 0, y: 0}
-    rotation: 4.2237415
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 3.4089777
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 1.5304815
-    scale: 0
+  - uv: {x: 0.47159168, y: 0.5646211}
+    rotation: 5.601746
+    scale: 0.019175895
     layer: 2
-  - uv: {x: 0, y: 0}
-    rotation: 0.6314593
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 0.8374172
-    scale: 0
-    layer: 4
-  - uv: {x: 0, y: 0}
-    rotation: 3.3426464
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 2.6569877
-    scale: 0
-    layer: 0
-  - uv: {x: 0, y: 0}
-    rotation: 0.020179937
-    scale: 0
-    layer: 7
-  - uv: {x: 0, y: 0}
-    rotation: 4.85306
-    scale: 0
-    layer: 6
-  - uv: {x: 0, y: 0}
-    rotation: 2.1337361
-    scale: 0
-    layer: 3
-  - uv: {x: 0, y: 0}
-    rotation: 3.461915
-    scale: 0
+  - uv: {x: 0.5212972, y: 0.5667511}
+    rotation: 0.6399554
+    scale: 0.027638234
     layer: 5
+  - uv: {x: 0.4798839, y: 0.5754832}
+    rotation: 5.001361
+    scale: 0.03189112
+    layer: 1
+  - uv: {x: 0.46261486, y: 0.5797583}
+    rotation: 0.17753805
+    scale: 0.017355174
+    layer: 2
+  - uv: {x: 0.504426, y: 0.44983083}
+    rotation: 2.9998183
+    scale: 0.022520062
+    layer: 0
+  - uv: {x: 0.45294222, y: 0.42530772}
+    rotation: 2.7138634
+    scale: 0.02644379
+    layer: 6
+  - uv: {x: 0.4507157, y: 0.5738561}
+    rotation: 5.690209
+    scale: 0.013186029
+    layer: 3
+  - uv: {x: 0.4457353, y: 0.429577}
+    rotation: 4.812702
+    scale: 0.031208858
+    layer: 5
+  - uv: {x: 0.515771, y: 0.54801273}
+    rotation: 2.1327386
+    scale: 0.02466606
+    layer: 6
+  - uv: {x: 0.51739347, y: 0.41917193}
+    rotation: 2.9327343
+    scale: 0.019871127
+    layer: 6
+  - uv: {x: 0.41381806, y: 0.43803778}
+    rotation: 0.11154842
+    scale: 0.020441677
+    layer: 3
+  - uv: {x: 0.4153073, y: 0.57186854}
+    rotation: 2.1031644
+    scale: 0.013139531
+    layer: 2
+  - uv: {x: 0.48997757, y: 0.5552346}
+    rotation: 2.5152795
+    scale: 0.012908855
+    layer: 0
+  - uv: {x: 0.42071816, y: 0.4149525}
+    rotation: 0.3459876
+    scale: 0.026186036
+    layer: 3
+  - uv: {x: 0.44811922, y: 0.4562399}
+    rotation: 3.1538334
+    scale: 0.016368495
+    layer: 6
+  - uv: {x: 0.498938, y: 0.4502085}
+    rotation: 3.0218663
+    scale: 0.02075254
+    layer: 7
+  - uv: {x: 0.4879558, y: 0.5609928}
+    rotation: 3.6999652
+    scale: 0.027387764
+    layer: 6
+  - uv: {x: 0.44191784, y: 0.42313933}
+    rotation: 4.654845
+    scale: 0.034762193
+    layer: 2
   _sunspotsMemory:
   - hemisphere: -1
-    scale: 0.02433281
-    longitude: 185.85161
-    latDeviation: 0.37136292
+    scale: 0.018979773
+    longitude: 145.90129
+    latDeviation: -2.377057
   - hemisphere: -1
-    scale: 0.04537038
-    longitude: 146.32933
-    latDeviation: -2.0526094
+    scale: 0.020584779
+    longitude: 164.4991
+    latDeviation: 0.78395414
   - hemisphere: -1
-    scale: 0.031564683
-    longitude: 153.23598
-    latDeviation: -1.8291306
+    scale: 0.019175895
+    longitude: 169.77301
+    latDeviation: -0.0741992
   - hemisphere: -1
-    scale: 0.020474575
-    longitude: 160.36829
-    latDeviation: 0.25206184
-  - hemisphere: 1
-    scale: 0.026759656
-    longitude: 152.60168
-    latDeviation: 2.251563
-  - hemisphere: 1
-    scale: 0.03837065
-    longitude: 197.4997
-    latDeviation: 1.6063541
-  - hemisphere: 1
-    scale: 0.046372253
-    longitude: 155.26447
-    latDeviation: 1.385287
-  - hemisphere: 1
-    scale: 0.012700958
-    longitude: 184.3945
-    latDeviation: 2.4469268
+    scale: 0.027638234
+    longitude: 187.667
+    latDeviation: 0.17202044
   - hemisphere: -1
-    scale: 0.028053043
-    longitude: 183.05533
-    latDeviation: -2.4142456
-  - hemisphere: 1
-    scale: 0.049739685
-    longitude: 176.95424
-    latDeviation: -0.22634363
+    scale: 0.03189112
+    longitude: 172.75821
+    latDeviation: 1.1829376
   - hemisphere: -1
-    scale: 0.048608758
-    longitude: 171.47375
-    latDeviation: 0.20572686
+    scale: 0.017355174
+    longitude: 166.54135
+    latDeviation: 1.6788344
   - hemisphere: 1
-    scale: 0.010250688
-    longitude: 167.143
-    latDeviation: -0.36103272
+    scale: 0.022520062
+    longitude: 181.59337
+    latDeviation: -1.7413449
   - hemisphere: 1
-    scale: 0.017369255
-    longitude: 196.9783
-    latDeviation: -0.13762093
-  - hemisphere: 1
-    scale: 0.03877937
-    longitude: 176.69681
-    latDeviation: -1.5349913
+    scale: 0.02644379
+    longitude: 163.0592
+    latDeviation: 1.0912609
   - hemisphere: -1
-    scale: 0.010845313
-    longitude: 181.81479
-    latDeviation: -0.47296977
-  - hemisphere: -1
-    scale: 0.031471793
-    longitude: 189.47745
-    latDeviation: 1.4983457
-  - hemisphere: -1
-    scale: 0.041184727
-    longitude: 178.15128
-    latDeviation: 1.4824085
+    scale: 0.013186029
+    longitude: 162.25764
+    latDeviation: 0.9943735
   - hemisphere: 1
-    scale: 0.046868052
-    longitude: 170.76678
-    latDeviation: -0.90458536
+    scale: 0.031208858
+    longitude: 160.4647
+    latDeviation: 0.59680605
   - hemisphere: -1
-    scale: 0.038921762
-    longitude: 179.97217
-    latDeviation: 1.7161483
+    scale: 0.02466606
+    longitude: 185.67755
+    latDeviation: -1.9896544
   - hemisphere: 1
-    scale: 0.012380909
-    longitude: 194.66907
-    latDeviation: -1.5454836
+    scale: 0.019871127
+    longitude: 186.26164
+    latDeviation: 1.8030386
+  - hemisphere: 1
+    scale: 0.020441677
+    longitude: 148.9745
+    latDeviation: -0.38135195
+  - hemisphere: -1
+    scale: 0.013139531
+    longitude: 149.51064
+    latDeviation: 0.7641524
+  - hemisphere: -1
+    scale: 0.012908855
+    longitude: 176.39192
+    latDeviation: -1.157634
+  - hemisphere: 1
+    scale: 0.026186036
+    longitude: 151.45854
+    latDeviation: 2.293344
+  - hemisphere: 1
+    scale: 0.016368495
+    longitude: 161.32292
+    latDeviation: -2.4790392
+  - hemisphere: 1
+    scale: 0.02075254
+    longitude: 179.61768
+    latDeviation: -1.7848415
+  - hemisphere: -1
+    scale: 0.027387764
+    longitude: 175.6641
+    latDeviation: -0.49329185
+  - hemisphere: 1
+    scale: 0.034762193
+    longitude: 159.09042
+    latDeviation: 1.3426441
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
