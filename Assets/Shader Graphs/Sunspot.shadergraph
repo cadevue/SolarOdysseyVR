@@ -23,6 +23,9 @@
         },
         {
             "m_Id": "6304614c5df14ae3bbc91b887b61f69a"
+        },
+        {
+            "m_Id": "8619c45373284c8a9f060e4ee323e15a"
         }
     ],
     "m_Keywords": [],
@@ -1919,6 +1922,9 @@
         },
         {
             "m_Id": "6304614c5df14ae3bbc91b887b61f69a"
+        },
+        {
+            "m_Id": "8619c45373284c8a9f060e4ee323e15a"
         }
     ]
 }
@@ -2083,6 +2089,34 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "8619c45373284c8a9f060e4ee323e15a",
+    "m_Guid": {
+        "m_GuidSerialized": "facfb75a-5bbe-40ad-822e-a11319bb1bd7"
+    },
+    "m_Name": "SunspotView",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "SunspotView",
+    "m_DefaultReferenceName": "_SunspotView",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
