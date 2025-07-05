@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &356717899
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222619239918823362, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.21114287
+      value: -0.007695189
       objectReference: {fileID: 0}
     - target: {fileID: 5313115564657351883, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_Layer
@@ -1027,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305248422685449537, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1274.28
+      value: 1260.91
       objectReference: {fileID: 0}
     - target: {fileID: 6305248422685449537, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1035,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305248422685449537, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1456.75
+      value: -1443.02
       objectReference: {fileID: 0}
     - target: {fileID: 6305248422685449537, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1152,6 +1152,10 @@ PrefabInstance:
     - target: {fileID: 9121731099770524279, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0739
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198234475310676561, guid: 6afba630586ec4042a2a24aadc8cbd17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1456,8 +1460,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697117096}
-  m_LocalRotation: {x: -0, y: 0.3055134, z: -0, w: -0.95218784}
-  m_LocalPosition: {x: 0, y: 0, z: -1453.98}
+  m_LocalRotation: {x: -0, y: 0.40843678, z: -0, w: -0.91278666}
+  m_LocalPosition: {x: 0, y: 0, z: -1441.74}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1465,10 +1469,10 @@ RectTransform:
   - {fileID: 1937693198}
   - {fileID: 1317970952}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -35.578, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -48.213, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1271.99, y: 283.25}
+  m_AnchoredPosition: {x: 1257.61, y: 283.25}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697117102
@@ -4143,7 +4147,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Welcome to the Sun, Agent Chris
+            m_StringArgument: Welcome to the Sun, Traveller
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &4856365683090157096
@@ -4213,6 +4217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 6083838969189066984, guid: 511e7bae1b6d46b4fb9bba6e89660f22, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8013842104826404567, guid: 51d95462ba6c9c1409845c4b8e0d43c3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4280,7 +4288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2207837822239912250, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5448444194525668087, guid: 3160cfdd214157c428d8c780a6ef9722, type: 3}
       propertyPath: m_Name
