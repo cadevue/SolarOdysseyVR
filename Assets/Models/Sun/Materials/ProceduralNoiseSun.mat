@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2DProceduralNoiseSun
+  m_Name: ProceduralNoiseSun
   m_Shader: {fileID: -6465566751694194690, guid: 3d654cf32153b0c4aaa54c9af6d9bef1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,10 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_d3f24f01e0b34e379e75bc3403d514d8_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 4e707b20a76fe2c4d8acde3c35b5853e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SunspotTexArray:
         m_Texture: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -59,23 +55,33 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _3DBaseTexNoiseScale_1: 0.0278
+    - _3DBaseTexNoiseScale_2: 0.062
+    - _3DDistortionIntensity: 0.02
+    - _3DDistortionScale: 0.05
+    - _3DDistortionSpeed: 3
     - _BaseTexNoiseScale_1: 540
     - _BaseTexNoiseScale_2: 1200
     - _DistortionIntensity: 9
-    - _DistortionScale: 400
+    - _DistortionScale: 1000
     - _FresnelNoiseScale: 1500
     - _FresnelPower: 27
     - _GranuleOffsetSpeed: 1
     - _GranuleQuantizeStep: 10
+    - _GranuleView: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SunspotView: 0
+    - _ViewTolerance: 0.025
+    - _dasdas: 0.0001
     m_Colors:
+    - _3DDistortionSpeed: {r: 4, g: -5, b: 3, a: 0}
+    - _3DMainColor: {r: 0.9956383, g: 0.007843138, b: 0, a: 1}
     - _DistortionSpeed: {r: -24, g: -12, b: 0, a: 0}
     - _FresnelColor: {r: 11.98431, g: 0.5019607, b: 0.1964638, a: 1}
     - _GranuleTilingSize: {r: 750, g: 750, b: 0, a: 0}
     - _MainColor: {r: 1.4980391, g: 0.02352941, b: 0, a: 1}
-    - _SunspotColorMultiply: {r: 0.8301887, g: 0.12702341, b: 0, a: 1}
-    - _SunspotSunBaseColor: {r: 0.7924528, g: 0.39720625, b: 0.08597367, a: 1}
+    - _SunspotColorMultiply: {r: 1, g: 0.1509434, b: 0, a: 1}
+    - _SunspotSunBaseColor: {r: 0.8117647, g: 0.24571691, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
