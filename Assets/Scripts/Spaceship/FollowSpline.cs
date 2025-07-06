@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -16,20 +17,28 @@ enum Planets
 public class FollowSpline : MonoBehaviour
 {
     [SerializeField] SplineContainer splineContainer;
-    [SerializeField] float speed = 0.1f;
     [SerializeField] GameObject spaceship;
+    [SerializeField] ProgressManager progressManager;
 
-    private float progressRatio;
+    public float speed = 0.1f;
+    public GameObject guideUI;
+    public RectTransform levelPages;
+
+    [SerializeField] private float progressRatio;
     private float progress;
     private float totalLength;
 
+    private float[] checkpoint = new float[] {0.15f, 0.30f};
+    private int currentCheckpointIndex = 0;
+
     private void Start()
     {
-        //PlanetTour();
+        guideUI.SetActive(false);
+        PlanetTour();
     }
 
     private void Update()
-    {   
+    {
     }
 
     private Spline GetSolarSystemSpline(string planet)
@@ -66,6 +75,11 @@ public class FollowSpline : MonoBehaviour
                 spaceship.transform.LookAt(pos + direction);
 
                 progressRatio += speed * Time.deltaTime * 0.001f;
+
+                if (Mathf.Abs(progressRatio - checkpoint[currentCheckpointIndex]) < 0.05f  && currentCheckpointIndex < checkpoint.Length - 1)
+                {
+                    currentCheckpointIndex++;
+                }
 
                 yield return null;
             }
@@ -236,5 +250,41 @@ public class FollowSpline : MonoBehaviour
 
             return spaceshipPath;
         }
+    }
+
+    //private void SetGuideUI()
+    //{
+    //    guideUI.SetActive(true);
+
+    //    if (currentCheckpointIndex == 2)
+    //    {
+    //        levelPages.anchoredPosition = levelPages.anchoredPosition + new Vector2(750f, 0f);
+    //    }
+        
+    //    StartCoroutine(HideGuideUIAfterDelay(15f));
+    //}
+
+    //private IEnumerator HideGuideUIAfterDelay(float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+    //    guideUI.SetActive(false);
+    //}
+
+    private void ShowKnotWorldPosition(BezierKnot knot)
+    {
+        Vector3 worldPosition = splineContainer.transform.TransformPoint(knot.Position);
+        Debug.Log($"Knot World Position: {worldPosition}");
+    }
+
+    public void OnReachedCheckpoint(float slowRatio)
+    {
+        speed /= slowRatio;
+    }
+
+    public void OffReachedCheckpoint(float fastRatio)
+    {
+        speed *= fastRatio;
+        currentCheckpointIndex++;
+        progressManager.OffCheckpoint();
     }
 }

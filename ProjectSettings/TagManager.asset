@@ -6,6 +6,8 @@ TagManager:
   tags:
   - TrackingObject
   - Actors
+  - Checkpoint
+  - Spaceship
   layers:
   - Default
   - TransparentFX

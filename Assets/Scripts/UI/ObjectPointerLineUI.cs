@@ -4,29 +4,32 @@ public class ObjectPointerLineUI : MonoBehaviour
 {
     [SerializeField] Transform pointedObject;
     [SerializeField] Transform vrPlayer;
+    [SerializeField] GameObject arrow;
 
     private RectTransform guideUI;
     private LineRenderer uiPointerLine;
-    private bool isObjectCovered = false;
 
     private void Start()
     {
         guideUI = GetComponent<RectTransform>();
         uiPointerLine = GetComponent<LineRenderer>();
+
+        SpawnArrow();
     }
 
     private void Update()
     {
-        isObjectCovered = CheckIfObjectCovered();
-
-        if (isObjectCovered)
+        if (CheckIfObjectCovered() || CheckIfObjectOutOfBounds())
         {
             uiPointerLine.enabled = false;
+            arrow.SetActive(false);
             return;
         }
         
         uiPointerLine.enabled = true;
+        arrow.SetActive(true);
         SetPointerLine();
+        SetArrow();
     }
 
     private void SetPointerLine()
@@ -60,5 +63,41 @@ public class ObjectPointerLineUI : MonoBehaviour
         bool isCovered = RectTransformUtility.RectangleContainsScreenPoint(guideUI, objectOnScreenPos, Camera.main);
 
         return isCovered;
+    }
+
+    private bool CheckIfObjectOutOfBounds()
+    {
+        Vector3 toTarget = (pointedObject.position - vrPlayer.position).normalized;
+        Vector3 toGuideUI = (guideUI.position - vrPlayer.position).normalized;
+
+        float angleBetween = Vector3.Angle(toTarget, toGuideUI);
+
+        return angleBetween > 90f;
+    }
+
+    private void SpawnArrow()
+    {
+        if (arrow != null)
+        {
+            arrow = Instantiate(arrow, pointedObject.position, Quaternion.identity);
+            arrow.transform.localScale = Vector3.one * 2f;
+            arrow.transform.localRotation = Quaternion.Euler(0f, 0f, -90f);
+        }
+    }
+
+    private void SetArrow()
+    {
+        if (arrow != null)
+        {
+            Vector3 arrowDirection = uiPointerLine.GetPosition(3) - uiPointerLine.GetPosition(2);
+
+            if (arrowDirection.x < 5f)
+            {
+                arrow.transform.localScale = new Vector3(2f, arrowDirection.x * 10f, 2f);
+            }
+
+            Quaternion arrowRotation = Quaternion.FromToRotation(new Vector3(0, 1, 0), arrowDirection.normalized);
+            arrow.transform.SetPositionAndRotation(uiPointerLine.GetPosition(3), arrowRotation);
+        }
     }
 }
