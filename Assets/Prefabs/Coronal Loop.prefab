@@ -1,5 +1,126 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4632133084004286009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8297356240883919014}
+  - component: {fileID: 3868479504557092903}
+  - component: {fileID: 4641359210851893167}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8297356240883919014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632133084004286009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.2, y: 57.2, z: 27.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39134263765194995}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &3868479504557092903
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632133084004286009}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.16212645, b: 0, a: 1}
+  m_Intensity: 15000
+  m_Range: 300
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &4641359210851893167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632133084004286009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &5448444194525668087
 GameObject:
   m_ObjectHideFlags: 0
@@ -17,7 +138,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &39134263765194995
 Transform:
@@ -29,9 +150,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.20496714, y: -0.7070936, z: 0.67674845, w: 0.004319608}
   m_LocalPosition: {x: -293.63812, y: 0, z: -948.5914}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 8297356240883919014}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 106.5, y: -72.79999, z: 90}
 --- !u!114 &9218028791145786120
@@ -49,14 +171,14 @@ MonoBehaviour:
   _bound: 250
   _coronalLoopVFX: {fileID: 8178966203306068590}
   _emitterRadius: 1000
-  _latitude: 90
-  _longitude: 0
-  _xRotation: 0
-  _yRotation: 0
-  _sinkDepth: 7
-  _footDistance: 85
-  _controlPointLeft: {x: -42, y: 85, z: 0}
-  _controlPointRight: {x: 42, y: 85, z: 0}
+  _latitude: 6.4
+  _longitude: -107.4
+  _xRotation: -40.3
+  _yRotation: 23
+  _sinkDepth: 0
+  _footDistance: 24
+  _controlPointLeft: {x: -12, y: 168.8, z: 0}
+  _controlPointRight: {x: -12, y: 24, z: 0}
   _xRadiusOverT:
     serializedVersion: 2
     m_Curve:
@@ -275,16 +397,16 @@ VisualEffect:
         m_Overridden: 1
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -42, y: 85, z: 0}
+      - m_Value: {x: -12, y: 168.8, z: 0}
         m_Name: BezierPoint_2
         m_Overridden: 1
-      - m_Value: {x: 42, y: 85, z: 0}
+      - m_Value: {x: -12, y: 24, z: 0}
         m_Name: BezierPoint_3
         m_Overridden: 1
-      - m_Value: {x: -42.5, y: 0, z: 0}
+      - m_Value: {x: -12, y: 0, z: 0}
         m_Name: BezierPoint_1
         m_Overridden: 1
-      - m_Value: {x: 42.5, y: 0, z: 0}
+      - m_Value: {x: 12, y: 0, z: 0}
         m_Name: BezierPoint_4
         m_Overridden: 1
     m_Vector4f:
@@ -393,6 +515,41 @@ VisualEffect:
           m_PostInfinity: 2
           m_RotationOrder: 4
         m_Name: PlasmaSizeOverLife
+        m_Overridden: 1
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2.0045269
+            outSlope: 2.0045269
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.49887085
+            value: 1
+            inSlope: 0.004516661
+            outSlope: 0.004516661
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: -1.9954935
+            outSlope: -1.9954935
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: YRadiusOverT
         m_Overridden: 1
     m_Gradient:
       m_Array: []

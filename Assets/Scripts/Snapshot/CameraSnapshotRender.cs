@@ -9,6 +9,36 @@ public class CameraSnapshotRender : MonoBehaviour
     [SerializeField] private int _pixelWidth = 1920;
     [SerializeField] private int _pixelHeight = 1080;
     [SerializeField] private string _snapshotName = "SunRender_01";
+    [SerializeField] private LayerMask _renderMask = -1; // Default to all layers
+
+
+    [Button]
+    public void TakeBasicScreenshot()
+    {
+        if (!Application.isPlaying)
+        {
+            Debug.LogError("Screenshots can only be taken in Play mode.");
+            return;
+        }
+
+        string path = Application.dataPath + "/Renders/";
+        if (!System.IO.Directory.Exists(path))
+            System.IO.Directory.CreateDirectory(path);
+
+        string screenshotFileName = _snapshotName + ".png";
+        string fullPath = path + screenshotFileName;
+
+        // Check if there's an existing file in that path
+        if (System.IO.File.Exists(fullPath))
+        {
+            Debug.LogWarning("File already exists at " + fullPath + ". It will be overwritten.");
+            return;
+        }
+
+        // Simple screenshot capture
+        ScreenCapture.CaptureScreenshot(fullPath, 1);
+    }
+
 
     [Button]
     public void TakeSnapshot()

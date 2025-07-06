@@ -65,18 +65,18 @@ Material:
     - _DistortionIntensity: 9
     - _DistortionScale: 1000
     - _FresnelNoiseScale: 1500
-    - _FresnelPower: 27
+    - _FresnelPower: 39.4
     - _GranuleOffsetSpeed: 1
     - _GranuleQuantizeStep: 10
-    - _GranuleView: 0
+    - _GranuleView: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SunspotView: 0
     - _ViewTolerance: 0.025
     - _dasdas: 0.0001
     m_Colors:
-    - _3DDistortionSpeed: {r: 4, g: -5, b: 3, a: 0}
-    - _3DMainColor: {r: 0.7882353, g: 0.007843138, b: 0, a: 1}
+    - _3DDistortionSpeed: {r: 4.8, g: -6, b: 3.6, a: 0}
+    - _3DMainColor: {r: 0.7647059, g: 0.003921569, b: 0, a: 1}
     - _DistortionSpeed: {r: -24, g: -12, b: 0, a: 0}
     - _FresnelColor: {r: 11.98431, g: 0.5019607, b: 0.1964638, a: 1}
     - _GranuleTilingSize: {r: 750, g: 750, b: 0, a: 0}
