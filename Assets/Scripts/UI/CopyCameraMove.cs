@@ -25,6 +25,12 @@ public class CopyCameraMove : MonoBehaviour
 
     private Quaternion ExtractRotation(Matrix4x4 m)
     {
-        return Quaternion.LookRotation(m.GetColumn(2), m.GetColumn(1));
+        Vector3 forward = m.GetColumn(2).normalized;
+        Vector3 upwards = m.GetColumn(1).normalized;
+
+        Vector3 right = Vector3.Cross(upwards, forward).normalized;
+        upwards = Vector3.Cross(forward, right).normalized;
+
+        return Quaternion.LookRotation(forward, upwards);
     }
 }

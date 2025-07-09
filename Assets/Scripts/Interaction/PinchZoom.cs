@@ -5,12 +5,12 @@ using UnityEngine.XR.Hands;
 public class PinchZoom : MonoBehaviour
 {
     public XRHandSubsystem m_HandSubsystem;
-    public Camera camera;
+    public Camera zoomedCamera;
     public float zoomSpeed = 100f;
 
     [SerializeField] private float initialDistance = 0f;
-    private bool canZoom = false;
-    private bool isZooming = false;
+    [SerializeField]  private bool canZoom = false;
+    [SerializeField]  private bool isZooming = false;
 
     private void Start()
     {
@@ -43,7 +43,7 @@ public class PinchZoom : MonoBehaviour
         XRHandSubsystem.UpdateSuccessFlags updateSuccessFlags,
         XRHandSubsystem.UpdateType updateType)
     {
-        if (updateType != XRHandSubsystem.UpdateType.Dynamic || camera == null)
+        if (updateType != XRHandSubsystem.UpdateType.Dynamic || zoomedCamera == null)
             return;
 
         if (!canZoom)
@@ -74,7 +74,7 @@ public class PinchZoom : MonoBehaviour
         float rightPinchDist = Vector3.Distance(rightThumbPose.position, rightIndexPose.position);
         float pinchThreshold = 0.02f;
 
-        //Debug.Log($"Left Pinch Distance: {leftPinchDist}, Right Pinch Distance: {rightPinchDist}");
+        Debug.Log($"Left Pinch Distance: {leftPinchDist}, Right Pinch Distance: {rightPinchDist}");
 
         bool isPinching = (leftPinchDist < pinchThreshold) && (rightPinchDist < pinchThreshold);
 
@@ -93,12 +93,12 @@ public class PinchZoom : MonoBehaviour
                     if (delta > 0)
                     {
                         // Zoom in
-                        camera.fieldOfView -= delta * zoomSpeed;
+                        zoomedCamera.fieldOfView -= delta * zoomSpeed;
                     }
                     else
                     {
                         // Zoom out
-                        camera.fieldOfView += -delta * zoomSpeed;
+                        zoomedCamera.fieldOfView += -delta * zoomSpeed;
                     }
             }
 
@@ -108,7 +108,7 @@ public class PinchZoom : MonoBehaviour
         else
         {
             isZooming = false;
-            camera.fieldOfView = 60f;
+            zoomedCamera.fieldOfView = 60f;
         }
     }
 
@@ -128,7 +128,7 @@ public class PinchZoom : MonoBehaviour
             Debug.Log("Player exited the trigger zone, disabling pinch zoom.");
             canZoom = false;
             isZooming = false;
-            camera.fieldOfView = 60f; // Reset to default FOV
+            zoomedCamera.fieldOfView = 60f; // Reset to default FOV
         }   
     }
 }

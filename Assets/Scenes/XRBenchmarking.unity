@@ -1036,9 +1036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4fabe85a4f1a34cb8ebbbc3a35db0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1230327961}
+  zoomedCamera: {fileID: 1230327961}
   zoomSpeed: 100
   initialDistance: 0
+  canZoom: 0
+  isZooming: 0
 --- !u!1 &1146634366
 GameObject:
   m_ObjectHideFlags: 0
