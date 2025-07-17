@@ -10,7 +10,7 @@ public class Checkpoint : MonoBehaviour
         if (other.CompareTag("Spaceship"))
         {
             Debug.Log("Spaceship is entering checkpoint");
-            ProgressManager.Instance?.OnCheckpoint(checkpointGuide, newPages);
+            ProgressManager.Instance?.OnCheckpoint(newPages);
         }
     }
 

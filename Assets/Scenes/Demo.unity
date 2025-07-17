@@ -1853,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031601587314731063, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.036376953
+      value: 0.02947998
       objectReference: {fileID: 0}
     - target: {fileID: 1486455203887616214, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_IsActive
@@ -2060,7 +2060,7 @@ PrefabInstance:
     - {fileID: 7097997116601771233, guid: 23653b5b133f01c468203843897471ca, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1031601587314731063, guid: 23653b5b133f01c468203843897471ca, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 592093188}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7240599436135408364, guid: 23653b5b133f01c468203843897471ca, type: 3}
@@ -3832,7 +3832,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10000
+  far clip plane: 15000
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
@@ -5357,7 +5357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.09672662, y: 0.0071861697}
+  m_AnchoredPosition: {x: 0.096258156, y: 0.0071861697}
   m_SizeDelta: {x: 0, y: 523.12}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &922563774
@@ -6259,7 +6259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.68099785, y: 0.0071861697}
+  m_AnchoredPosition: {x: 0.6608208, y: 0.0071861697}
   m_SizeDelta: {x: 0, y: 523.12}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1219483611
@@ -7752,7 +7752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoints: 
   followSpline: {fileID: 859711486}
-  guideUI: {fileID: 0}
+  guideUI: {fileID: 675385106}
   acceleration: 5
 --- !u!4 &1613133603
 Transform:

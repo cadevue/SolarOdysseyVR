@@ -24,11 +24,11 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    public void OnCheckpoint(GameObject[] checkpointGuide, int newPages)
+    public void OnCheckpoint(int newPages)
     {
         followSpline.OnReachedCheckpoint(acceleration);
 
-        guideUI.SetPage(checkpointGuide, newPages);
+        guideUI.SetPage(newPages);
         guideUI.ShowGuideUI();
     }
 

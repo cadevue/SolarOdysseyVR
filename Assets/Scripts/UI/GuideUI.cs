@@ -13,7 +13,7 @@ public class GuideUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetPage(GameObject[] pages, int newPages)
+    public void SetPage(int newPages)
     {
         //foreach (Transform child in levelPages.transform)
         //{
