@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Spaceship"))
         {
+            Debug.Log("Spaceship is entering checkpoint");
             ProgressManager.Instance?.OnCheckpoint(checkpointGuide, newPages);
         }
     }
@@ -17,6 +18,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Spaceship"))
         {
+            Debug.Log("Spaceship is exiting checkpoint");
             ProgressManager.Instance?.OffCheckpoint();
 
             GameObject.Destroy(gameObject);
