@@ -2,7 +2,6 @@ using System;
 using NaughtyAttributes;
 using UnityEngine;
 using LitMotion;
-using LitMotion.Extensions;
 
 public class SunspotManager : MonoBehaviour
 {
