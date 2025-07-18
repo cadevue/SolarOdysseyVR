@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class SunBaseController : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class SunBaseController : MonoBehaviour
     public void SetSunBaseModel(SunBaseModel newModel)
     {
         model = newModel;
+        RefreshView();
+    }
+
+    [Button]
+    public void RefreshView()
+    {
         view.SetView(model);
     }
 }

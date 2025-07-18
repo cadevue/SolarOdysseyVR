@@ -1323,8 +1323,8 @@
     "m_ObjectId": "0651282b832e47feb108121fd5cea7b5",
     "m_Title": "Sunspot",
     "m_Position": {
-        "x": -3105.0,
-        "y": 88.0
+        "x": -3105.60009765625,
+        "y": 86.4000244140625
     }
 }
 
@@ -1534,7 +1534,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "0c61ea84a5714104b76bb50edd0b9402",
     "m_Id": 0,
-    "m_DisplayName": "MainTexNoiseScale_2",
+    "m_DisplayName": "NoiseTextureScaleTwo",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1753,7 +1753,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "12f6a9c4bc914225abc17263f82dcfa5",
     "m_Id": 0,
-    "m_DisplayName": "MainTexNoiseScale_1",
+    "m_DisplayName": "NoiseTextureScalOne",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1947,8 +1947,8 @@
     "m_ObjectId": "18481b8b77ce4af1aea3c0649a01896f",
     "m_Title": "Base Texture",
     "m_Position": {
-        "x": -3087.0,
-        "y": -814.0
+        "x": -3087.199951171875,
+        "y": -815.2000122070313
     }
 }
 
@@ -2057,7 +2057,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "1d0990f3838f43a58c1d690ae30f605b",
     "m_Id": 0,
-    "m_DisplayName": "DistortionSpeed",
+    "m_DisplayName": "SurfaceDistortionSpeed",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2722,10 +2722,10 @@
     "m_Guid": {
         "m_GuidSerialized": "9e900c2c-2729-4fb5-af95-54cfcd2c4f0d"
     },
-    "m_Name": "MainTexNoiseScale_2",
+    "m_Name": "NoiseTextureScaleTwo",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MainTexNoiseScale_2",
-    "m_DefaultReferenceName": "_MainTexNoiseScale_2",
+    "m_RefNameGeneratedByDisplayName": "NoiseTextureScaleTwo",
+    "m_DefaultReferenceName": "_NoiseTextureScaleTwo",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2759,7 +2759,7 @@
     "m_RenderFace": 2,
     "m_AlphaClip": false,
     "m_CastShadows": false,
-    "m_ReceiveShadows": true,
+    "m_ReceiveShadows": false,
     "m_DisableTint": false,
     "m_AdditionalMotionVectorMode": 0,
     "m_AlembicMotionVectors": false,
@@ -3206,10 +3206,10 @@
     "m_Guid": {
         "m_GuidSerialized": "602991ec-9af2-4619-a90a-d1b647096132"
     },
-    "m_Name": "MainColor",
+    "m_Name": "SunColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MainColor",
-    "m_DefaultReferenceName": "_MainColor",
+    "m_RefNameGeneratedByDisplayName": "SunColor",
+    "m_DefaultReferenceName": "_SunColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -4486,10 +4486,10 @@
     "m_Guid": {
         "m_GuidSerialized": "00911889-71fc-4379-addd-d74bb2b41521"
     },
-    "m_Name": "DistortionSpeed",
+    "m_Name": "SurfaceDistortionSpeed",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DistortionSpeed",
-    "m_DefaultReferenceName": "_DistortionSpeed",
+    "m_RefNameGeneratedByDisplayName": "SurfaceDistortionSpeed",
+    "m_DefaultReferenceName": "_SurfaceDistortionSpeed",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -5124,8 +5124,8 @@
     "m_ObjectId": "7b956a4fffd04a2f9d0c6037e9bd4a59",
     "m_Title": "Granule",
     "m_Position": {
-        "x": -4678.0,
-        "y": 1002.0
+        "x": -4678.39990234375,
+        "y": 1000.7999877929688
     }
 }
 
@@ -5170,10 +5170,10 @@
     "m_Guid": {
         "m_GuidSerialized": "70d48e73-1738-424e-a872-dc2ae8ed9750"
     },
-    "m_Name": "MainTexNoiseScale_1",
+    "m_Name": "NoiseTextureScalOne",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MainTexNoiseScale_1",
-    "m_DefaultReferenceName": "_MainTexNoiseScale_1",
+    "m_RefNameGeneratedByDisplayName": "NoiseTextureScalOne",
+    "m_DefaultReferenceName": "_NoiseTextureScalOne",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -6136,7 +6136,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "97912b0eb2fb48fabf261702d72356b4",
     "m_Id": 0,
-    "m_DisplayName": "MainColor",
+    "m_DisplayName": "SunColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -7005,8 +7005,8 @@
     "m_ObjectId": "b96de942457e4efdad55f18a0e323f5c",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -2485.0,
-        "y": -1616.0
+        "x": -2485.60009765625,
+        "y": -1617.5999755859375
     }
 }
 

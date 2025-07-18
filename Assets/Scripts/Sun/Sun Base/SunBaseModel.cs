@@ -7,10 +7,10 @@ public class SunBaseModel
     [ColorUsage(true, true)]
     public Color SunColor;
 
-    public float NoiseTextureScalOne;
+    public float NoiseTextureScaleOne;
     public float NoiseTextureScaleTwo;
 
-    public Vector3 DistortionSpeed;
+    public Vector3 SurfaceDistortionSpeed;
 
     [ColorUsage(true, true)]
     public Color FresnelColor;

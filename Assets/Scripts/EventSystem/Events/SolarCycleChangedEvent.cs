@@ -1,9 +1,9 @@
 public readonly struct SolarCycleChangedEvent : IEvent
 {
-    public SolarCycleModel Model { get; }
+    public float CycleProgress { get; }
 
-    public SolarCycleChangedEvent(SolarCycleModel model)
+    public SolarCycleChangedEvent(float cycleProgress)
     {
-        Model = model;
+        CycleProgress = cycleProgress;
     }
 }

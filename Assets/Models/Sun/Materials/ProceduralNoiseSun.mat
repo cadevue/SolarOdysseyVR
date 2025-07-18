@@ -65,12 +65,14 @@ Material:
     - _DistortionIntensity: 9
     - _DistortionScale: 1000
     - _FresnelNoiseScale: 1500
-    - _FresnelPower: 39.4
+    - _FresnelPower: 40
     - _GranuleOffsetSpeed: 0.2
     - _GranuleQuantizeStep: 10
     - _GranuleView: 0
-    - _MainTexNoiseScale_1: 0.032
-    - _MainTexNoiseScale_2: 0.016
+    - _MainTexNoiseScale_1: 0.048
+    - _MainTexNoiseScale_2: 0.024
+    - _NoiseTextureScalOne: 0.036
+    - _NoiseTextureScaleTwo: 0.024
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SunspotView: 0
@@ -79,11 +81,13 @@ Material:
     m_Colors:
     - _3DDistortionSpeed: {r: 4.8, g: -6, b: 3.6, a: 0}
     - _3DMainColor: {r: 0.7647059, g: 0.003921569, b: 0, a: 1}
-    - _DistortionSpeed: {r: 0, g: 0, b: -12.31, a: 0}
+    - _DistortionSpeed: {r: 0, g: 0, b: -5, a: 0}
     - _FresnelColor: {r: 11.98431, g: 0.5019607, b: 0.1964638, a: 1}
     - _GranuleTilingSize: {r: 750, g: 750, b: 0, a: 0}
     - _MainColor: {r: 0.84905654, g: 0.013335966, b: 0, a: 1}
+    - _SunColor: {r: 0.8509804, g: 0.011764706, b: 0, a: 1}
     - _SunspotColorMultiply: {r: 1, g: 0.1509434, b: 0, a: 1}
     - _SunspotSunBaseColor: {r: 0.8117647, g: 0.24571691, b: 0, a: 1}
+    - _SurfaceDistortionSpeed: {r: 0, g: 0, b: -6, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
