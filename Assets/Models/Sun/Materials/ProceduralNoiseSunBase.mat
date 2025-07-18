@@ -16,12 +16,12 @@ MonoBehaviour:
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ProceduralNoiseSun
-  m_Shader: {fileID: -6465566751694194690, guid: 3d654cf32153b0c4aaa54c9af6d9bef1, type: 3}
+  m_Name: ProceduralNoiseSunBase
+  m_Shader: {fileID: -6465566751694194690, guid: bb339b7f2db09194ba335d92dee2b9cc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-532852006403782442
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ProceduralNoiseSunFull
+  m_Shader: {fileID: -6465566751694194690, guid: 3d654cf32153b0c4aaa54c9af6d9bef1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SunspotTexArray:
+        m_Texture: {fileID: 18700000, guid: 0f90cab74a659614986cb64a6f564a1c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _3DBaseTexNoiseScale_1: 0.016
+    - _3DBaseTexNoiseScale_2: 0.032
+    - _3DDistortionIntensity: 0.02
+    - _3DDistortionScale: 0.05
+    - _3DDistortionSpeed: 3
+    - _BaseTexNoiseScale_1: 540
+    - _BaseTexNoiseScale_2: 1200
+    - _DistortionIntensity: 9
+    - _DistortionScale: 1000
+    - _FresnelNoiseScale: 1500
+    - _FresnelPower: 40
+    - _GranuleOffsetSpeed: 0.2
+    - _GranuleQuantizeStep: 10
+    - _GranuleView: 0
+    - _MainTexNoiseScale_1: 0.048
+    - _MainTexNoiseScale_2: 0.024
+    - _NoiseTextureScalOne: 0.036
+    - _NoiseTextureScaleTwo: 0.024
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SunspotView: 0
+    - _ViewTolerance: 0.025
+    - _dasdas: 0.0001
+    m_Colors:
+    - _3DDistortionSpeed: {r: 4.8, g: -6, b: 3.6, a: 0}
+    - _3DMainColor: {r: 0.7647059, g: 0.003921569, b: 0, a: 1}
+    - _DistortionSpeed: {r: 0, g: 0, b: -5, a: 0}
+    - _FresnelColor: {r: 11.98431, g: 0.5019607, b: 0.1964638, a: 1}
+    - _GranuleTilingSize: {r: 750, g: 750, b: 0, a: 0}
+    - _MainColor: {r: 0.84905654, g: 0.013335966, b: 0, a: 1}
+    - _SunColor: {r: 0.8509804, g: 0.011764706, b: 0, a: 1}
+    - _SunspotColorMultiply: {r: 1, g: 0.1509434, b: 0, a: 1}
+    - _SunspotSunBaseColor: {r: 0.8117647, g: 0.24571691, b: 0, a: 1}
+    - _SurfaceDistortionSpeed: {r: 0, g: 0, b: -6, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
