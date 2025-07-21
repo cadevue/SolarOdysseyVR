@@ -76,10 +76,10 @@ public class FollowSpline : MonoBehaviour
 
                 progressRatio += speed * Time.deltaTime * 0.001f;
 
-                if (Mathf.Abs(progressRatio - checkpoint[currentCheckpointIndex]) < 0.05f  && currentCheckpointIndex < checkpoint.Length - 1)
-                {
-                    currentCheckpointIndex++;
-                }
+                // if (Mathf.Abs(progressRatio - checkpoint[currentCheckpointIndex]) < 0.05f  && currentCheckpointIndex < checkpoint.Length - 1)
+                // {
+                //     currentCheckpointIndex++;
+                // }
 
                 yield return null;
             }
@@ -285,6 +285,5 @@ public class FollowSpline : MonoBehaviour
     {
         speed *= fastRatio;
         currentCheckpointIndex++;
-        progressManager.OffCheckpoint();
     }
 }

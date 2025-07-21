@@ -4,10 +4,9 @@ public class ProgressManager : MonoBehaviour
 {
     public static ProgressManager Instance { get; private set; }
 
-    [SerializeField] int[] checkpoints;
     [SerializeField] FollowSpline followSpline;
     [SerializeField] GuideUI guideUI;
-    [SerializeField] float acceleration = 5f;
+    [SerializeField] float acceleration = 2f;
     public float ProgressRatio { get; private set; } = 0f;
     private int currentCheckpointIndex = 0;
 
@@ -24,19 +23,19 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    public void OnCheckpoint(int newPages)
+    public void OnCheckpoint(int newPageCount)
     {
         followSpline.OnReachedCheckpoint(acceleration);
 
-        guideUI.SetPage(newPages);
-        guideUI.ShowGuideUI();
+        guideUI.SetPage(newPageCount);
+        guideUI.ToggleVisibility();
     }
 
     public void OffCheckpoint()
     {
         followSpline.OffReachedCheckpoint(acceleration);
 
-        guideUI.HideGuideUI();
+        guideUI.ToggleVisibility();
         currentCheckpointIndex++;
     }
 }

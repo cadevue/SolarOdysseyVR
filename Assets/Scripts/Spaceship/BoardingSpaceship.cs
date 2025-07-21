@@ -10,13 +10,11 @@ public class BoardingSpaceship : MonoBehaviour
     public Transform spaceship;
 
     
-    [SerializeField] private bool isInShip = false;
-    [SerializeField]  private bool isTeleporting = false;
+    private bool isInShip = false;
+    private bool isTeleporting = false;
 
     public void TeleportWithFade()
     {
-        isTeleporting = true;
-
         //yield return StartCoroutine(fadeCanvas.FadeOut());
         dimmerUI.SetDuration(0.5f);
         dimmerUI.TransparentToOpaque();
@@ -42,8 +40,6 @@ public class BoardingSpaceship : MonoBehaviour
         //yield return StartCoroutine(fadeCanvas.FadeIn());
         dimmerUI.OpaqueToTransparent();
         dimmerUI.SetDuration(5f);
-
-        isTeleporting = false;
     }
 
     public void StartTeleport()
