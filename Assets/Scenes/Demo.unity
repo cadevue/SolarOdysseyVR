@@ -938,8 +938,6 @@ MonoBehaviour:
   shipSeatAnchor: {fileID: 1469096123}
   shipExitAnchor: {fileID: 219347451}
   spaceship: {fileID: 74550706}
-  isInShip: 0
-  isTeleporting: 0
 --- !u!1001 &77816303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1958,7 +1956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031601587314731063, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.03375244
+      value: 0.028869629
       objectReference: {fileID: 0}
     - target: {fileID: 1486455203887616214, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_IsActive
@@ -2011,6 +2009,14 @@ PrefabInstance:
     - target: {fileID: 3968407387784390313, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141409169788106802, guid: 23653b5b133f01c468203843897471ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141409169788106802, guid: 23653b5b133f01c468203843897471ca, type: 3}
+      propertyPath: canvasGroup
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6386979896335454084, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2164,7 +2170,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4141409169788106802, guid: 23653b5b133f01c468203843897471ca, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7097997116601771233, guid: 23653b5b133f01c468203843897471ca, type: 3}
     m_AddedGameObjects:
@@ -2175,45 +2182,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7240599436135408364, guid: 23653b5b133f01c468203843897471ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 675385113}
-    - targetCorrespondingSourceObject: {fileID: 7240599436135408364, guid: 23653b5b133f01c468203843897471ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 675385106}
-    - targetCorrespondingSourceObject: {fileID: 1486455203887616214, guid: 23653b5b133f01c468203843897471ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 313228155}
   m_SourcePrefab: {fileID: 100100000, guid: 23653b5b133f01c468203843897471ca, type: 3}
---- !u!1 &313228154 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1486455203887616214, guid: 23653b5b133f01c468203843897471ca, type: 3}
-  m_PrefabInstance: {fileID: 313228153}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &313228155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313228154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e823122c78d8d845a8a4a192a193fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pageIndex: 0
-  pageName: 
-  events:
-    onPageActivated:
-      m_PersistentCalls:
-        m_Calls: []
-    onPageDeactivated:
-      m_PersistentCalls:
-        m_Calls: []
-    onPageShown:
-      m_PersistentCalls:
-        m_Calls: []
-    onPageHidden:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,7 +2390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9144578934652949696, guid: 67d477bd7e9ee0e428c0bf45c031bffa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3971,22 +3940,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7240599436135408364, guid: 23653b5b133f01c468203843897471ca, type: 3}
   m_PrefabInstance: {fileID: 313228153}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &675385106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675385105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b6b52f24fa36f42aec20a0a8c06c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelPages: {fileID: 1240581981}
-  canvasGroup: {fileID: 675385113}
-  allPages: []
-  activePages: []
 --- !u!225 &675385113
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3994,7 +3947,7 @@ CanvasGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675385105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -4573,7 +4526,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 311945713}
   m_HandleRect: {fileID: 311945712}
   m_Direction: 0
-  m_Value: 0.4492153
+  m_Value: 0.37233293
   m_Size: 0.99945194
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5042,7 +4995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859711485}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b887624319a19704c89513570793ec89, type: 3}
   m_Name: 
@@ -5307,8 +5260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e823122c78d8d845a8a4a192a193fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageIndex: 1
-  pageName: 
   events:
     onPageActivated:
       m_PersistentCalls:
@@ -5724,7 +5675,7 @@ PrefabInstance:
     - target: {fileID: 5042974904496807815, guid: 6345ee9097106a94682bef33ef297719, type: 3}
       propertyPath: zoomedCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10792434}
     - target: {fileID: 5358894022513625709, guid: 6345ee9097106a94682bef33ef297719, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6322,7 +6273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.3413582, y: 0.0071861697}
+  m_AnchoredPosition: {x: 0.65704584, y: 0.0071861697}
   m_SizeDelta: {x: 0, y: 523.12}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1219483611
@@ -6598,7 +6549,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145148977}
   m_HandleRect: {fileID: 2145148976}
   m_Direction: 2
-  m_Value: 0.9990574
+  m_Value: 0.99870986
   m_Size: 0.6640535
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7782,7 +7733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpline: {fileID: 859711486}
-  guideUI: {fileID: 675385106}
+  guideUI: {fileID: 0}
   acceleration: 2
 --- !u!4 &1613133603
 Transform:
