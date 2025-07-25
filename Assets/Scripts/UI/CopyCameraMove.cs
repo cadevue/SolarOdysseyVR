@@ -5,17 +5,17 @@ public class CopyCameraMove : MonoBehaviour
     [SerializeField] Transform playerCamera;
     [SerializeField] Transform anchorA;
     [SerializeField] Transform anchorB;
-    
+
     [Header("Performance Settings")]
     [SerializeField] bool useFixedUpdate = false;
-    
+
     [Header("VR Stability Settings")]
     [SerializeField] bool enableSmoothing = true;
     [SerializeField] float smoothingFactor = 0.1f; // Lower = smoother, Higher = more responsive
     [SerializeField] bool enableDeadzone = true;
     [SerializeField] float positionDeadzone = 0.001f; // Minimum movement threshold
     [SerializeField] float rotationDeadzone = 0.1f; // Minimum rotation threshold in degrees
-    
+
     // Cache for performance and smoothing
     private Matrix4x4 transformMatrix;
     private Vector3 lastPosition;
@@ -31,7 +31,7 @@ public class CopyCameraMove : MonoBehaviour
 
         float scaleFactor = distA / distB;
         anchorA.localScale = Vector3.one * scaleFactor;
-        
+
         // Initialize smoothing values
         lastPosition = transform.position;
         lastRotation = transform.rotation;
@@ -61,11 +61,11 @@ public class CopyCameraMove : MonoBehaviour
         if (playerCamera == null || anchorA == null || anchorB == null) return;
 
         var m = anchorB.localToWorldMatrix * anchorA.worldToLocalMatrix * playerCamera.localToWorldMatrix;
-        
+
         // Extract position and rotation from matrix
         Vector3 newPosition = m.GetColumn(3);
         Quaternion newRotation = ExtractRotation(m);
-        
+
         // Initialize if first run
         if (!isInitialized)
         {
@@ -75,7 +75,7 @@ public class CopyCameraMove : MonoBehaviour
             targetRotation = newRotation;
             isInitialized = true;
         }
-        
+
         // Apply deadzone filtering
         if (enableDeadzone)
         {
@@ -85,7 +85,7 @@ public class CopyCameraMove : MonoBehaviour
             {
                 newPosition = lastPosition;
             }
-            
+
             // Rotation deadzone
             float rotationDelta = Quaternion.Angle(newRotation, lastRotation);
             if (rotationDelta < rotationDeadzone)
@@ -93,21 +93,21 @@ public class CopyCameraMove : MonoBehaviour
                 newRotation = lastRotation;
             }
         }
-        
+
         // Update targets
         targetPosition = newPosition;
         targetRotation = newRotation;
-        
+
         // Apply smoothing
         if (enableSmoothing)
         {
             // Use Time.unscaledDeltaTime for consistent smoothing regardless of time scale
             float deltaTime = useFixedUpdate ? Time.fixedUnscaledDeltaTime : Time.unscaledDeltaTime;
             float smoothing = Mathf.Clamp01(smoothingFactor / deltaTime);
-            
+
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothing);
             Quaternion smoothedRotation = Quaternion.Slerp(transform.rotation, targetRotation, smoothing);
-            
+
             transform.SetPositionAndRotation(smoothedPosition, smoothedRotation);
         }
         else
@@ -115,7 +115,7 @@ public class CopyCameraMove : MonoBehaviour
             // Apply transformation immediately without smoothing
             transform.SetPositionAndRotation(targetPosition, targetRotation);
         }
-        
+
         // Update last values for next frame
         lastPosition = targetPosition;
         lastRotation = targetRotation;
@@ -130,5 +130,10 @@ public class CopyCameraMove : MonoBehaviour
         upwards = Vector3.Cross(forward, right).normalized;
 
         return Quaternion.LookRotation(forward, upwards);
+    }
+
+    public void ChangeAnchor(GameObject newAnchor)
+    {
+        anchorA = newAnchor.transform;
     }
 }

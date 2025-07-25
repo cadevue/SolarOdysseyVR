@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.UI;
 using LitMotion;
 using LitMotion.Extensions;
 
@@ -8,17 +10,21 @@ public class GuideUI : MonoBehaviour
 {
     [SerializeField] RectTransform levelPages;
     [SerializeField] CanvasGroup canvasGroup;
-
+    [SerializeField] GameObject scrollView;
     [SerializeField] private List<GameObject> allPages = new List<GameObject>();
     [SerializeField] private List<GameObject> activePages = new List<GameObject>();
-    private List<PageEventComponent> activePageComponents = new List<PageEventComponent>();
+    [SerializeField] private List<PageEventComponent> activePageComponents = new List<PageEventComponent>();
+    [SerializeField] private float deltaPosition = 1700f;
     private int lastPageIndex = 0;
-    private bool isVisible = false;
+    [SerializeField] private bool isVisible = false;
+    [SerializeField] private bool isPageTurning = false;
+    [SerializeField] private int currentPageIndex = 0;
+
 
     public bool IsVisible => isVisible;
     public int TotalPages => allPages.Count;
     public int ActivePagesCount => activePages.Count;
-    public int CurrentPageIndex => lastPageIndex;
+    public int CurrentPageIndex => currentPageIndex;
 
     private void Awake()
     {
@@ -41,19 +47,10 @@ public class GuideUI : MonoBehaviour
 
     public void SetPage(int newPageCount)
     {
-        //foreach (Transform child in levelPages.transform)
-        //{
-        //    Destroy(child.gameObject);
-        //}
-
-        //foreach (GameObject page in pages)
-        //{
-        //    GameObject newPage = Instantiate(page.gameObject, levelPages.transform);
-        //}
         int startIndex = lastPageIndex;
         int endIndex = Mathf.Min(startIndex + newPageCount, allPages.Count);
 
-        HideAllPages();
+        DeactivateAllPages();
 
         for (int i = startIndex; i < endIndex; i++)
         {
@@ -63,6 +60,8 @@ public class GuideUI : MonoBehaviour
         }
 
         lastPageIndex += endIndex;
+        currentPageIndex = 0;
+        ShowPage(activePages[currentPageIndex]);
     }
 
     private void ActivatePage(GameObject page)
@@ -75,12 +74,26 @@ public class GuideUI : MonoBehaviour
             activePages.Add(page);
 
         PageEventComponent eventComponent = page.GetComponent<PageEventComponent>();
-        if (!activePageComponents.Contains(eventComponent))
-        {
-            activePageComponents.Add(eventComponent);
-        }
         eventComponent?.OnPageActivated();
+
+        if (activePages.Count == 1)
+        {
+            ShowPage(page);
+        }
+        else
+        {
+            HidePage(page);
+        }
+    }
+
+    private void ShowPage(GameObject page)
+    {
+        if (page == null || !activePages.Contains(page)) return;
+        page.SetActive(true);
+        PageEventComponent eventComponent = page.GetComponent<PageEventComponent>();
         eventComponent?.OnPageShown();
+
+        Debug.Log($"Showing page: {page.name}");
     }
 
     private void DeactivatePage(GameObject page)
@@ -90,25 +103,28 @@ public class GuideUI : MonoBehaviour
         page.SetActive(false);
 
         PageEventComponent eventComponent = page.GetComponent<PageEventComponent>();
-        if (activePageComponents.Contains(eventComponent))
-        {
-            activePageComponents.Remove(eventComponent);
-        }
         eventComponent?.OnPageDeactivated();
-        eventComponent?.OnPageHidden();
     }
 
-    private void HideAllPages()
+    private void HidePage(GameObject page)
+    {
+        if (page == null || !activePages.Contains(page)) return;
+
+        PageEventComponent eventComponent = page.GetComponent<PageEventComponent>();
+        eventComponent?.OnPageHidden();
+        Debug.Log($"Hiding page: {page.name}");
+    }
+
+    private void DeactivateAllPages()
     {
         if (activePages == null || activePages.Count == 0) return;
 
         foreach (GameObject page in activePages)
         {
             DeactivatePage(page);
+            HidePage(page);
         }
-
         activePages.Clear();
-        activePageComponents.Clear();
     }
 
     public void ShowGuideUI()
@@ -125,18 +141,11 @@ public class GuideUI : MonoBehaviour
         LMotion.Create(canvasGroup.alpha, 0f, 3f)
         .WithOnComplete(() =>
         {
-            HideAllPages();
+            DeactivateAllPages();
             gameObject.SetActive(false);
             isVisible = false;
         })
-        .Bind(x => canvasGroup.alpha = x)
-        ;
-    }
-
-    public void ClearPages()
-    {
-        HideAllPages();
-        lastPageIndex = 0;
+        .Bind(x => canvasGroup.alpha = x);
     }
 
     public void ToggleVisibility()
@@ -148,6 +157,99 @@ public class GuideUI : MonoBehaviour
         else
         {
             ShowGuideUI();
+        }
+    }
+
+    public void TurnPage(float direction)
+    {
+        if (isPageTurning || activePages.Count == 0) return;
+
+        StartCoroutine(TurnPageCoroutine(direction));
+    }
+
+    private IEnumerator TurnPageCoroutine(float direction)
+    {
+        isPageTurning = true;
+
+        try
+        {
+            if (direction > 0)
+            {
+                yield return StartCoroutine(NextPageCoroutine());
+            }
+            else if (direction < 0)
+            {
+                yield return StartCoroutine(PreviousPageCoroutine());
+            }
+        }
+        finally
+        {
+            isPageTurning = false;
+        }
+    }
+
+    private IEnumerator NextPageCoroutine()
+    {
+        if (currentPageIndex >= activePages.Count - 1) yield break;
+
+        Debug.Log($"+Current Page Index: {currentPageIndex}, Active Pages Count: {activePages.Count}");
+        currentPageIndex++;
+        ShowPage(activePages[currentPageIndex]);
+
+        bool animationComplete = false;
+
+        LMotion.Create(levelPages.anchoredPosition.x, levelPages.anchoredPosition.x - deltaPosition, 0.3f)
+        .WithOnComplete(() =>
+        {
+            HidePage(activePages[currentPageIndex - 1]);
+            animationComplete = true;
+        })
+        .Bind(x => levelPages.anchoredPosition = new Vector2(x, levelPages.anchoredPosition.y));
+
+        yield return new WaitUntil(() => animationComplete);
+    }
+    private IEnumerator PreviousPageCoroutine()
+    {
+        if (currentPageIndex <= 0) yield break;
+        Debug.Log($"-Current Page Index: {currentPageIndex}, Active Pages Count: {activePages.Count}");
+        ShowPage(activePages[currentPageIndex - 1]);
+
+        bool animationComplete = false;
+
+        LMotion.Create(levelPages.anchoredPosition.x, levelPages.anchoredPosition.x + deltaPosition, 0.3f)
+        .WithOnComplete(() =>
+        {
+            HidePage(activePages[currentPageIndex]);
+            currentPageIndex--;
+            animationComplete = true;
+        })
+        .Bind(x => levelPages.anchoredPosition = new Vector2(x, levelPages.anchoredPosition.y));
+
+        yield return new WaitUntil(() => animationComplete);
+    }
+
+    public void ActivateStencilObject()
+    {
+        foreach (var page in activePages)
+        {
+            if (page != activePages[currentPageIndex])
+            {
+                page.SetActive(false);
+            }
+            else
+            {
+                page.SetActive(true);
+            }
+        }
+        scrollView.GetComponent<Image>().enabled = false;
+    }
+
+    public void DeactivateStencilObject()
+    {
+        scrollView.GetComponent<Image>().enabled = true;
+        foreach (var page in activePages)
+        {
+            page.SetActive(true);
         }
     }
 }

@@ -18,7 +18,6 @@ public class PageEventComponent : MonoBehaviour
     public PageEvents events;
 
     private float activationDelay = 3f;
-    private Coroutine currentCoroutine;
 
     public void OnPageActivated()
     {

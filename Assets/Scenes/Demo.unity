@@ -1956,7 +1956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031601587314731063, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.028869629
+      value: 0.030151367
       objectReference: {fileID: 0}
     - target: {fileID: 1486455203887616214, guid: 23653b5b133f01c468203843897471ca, type: 3}
       propertyPath: m_IsActive
@@ -2336,6 +2336,14 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 4851914623609416191}
+    - target: {fileID: 4628497377507070929, guid: 67d477bd7e9ee0e428c0bf45c031bffa, type: 3}
+      propertyPath: positionDeadzone
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628497377507070929, guid: 67d477bd7e9ee0e428c0bf45c031bffa, type: 3}
+      propertyPath: rotationDeadzone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6362533025881595930, guid: 67d477bd7e9ee0e428c0bf45c031bffa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6273,7 +6281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.65704584, y: 0.0071861697}
+  m_AnchoredPosition: {x: 0.51839525, y: 0.0071861697}
   m_SizeDelta: {x: 0, y: 523.12}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1219483611
